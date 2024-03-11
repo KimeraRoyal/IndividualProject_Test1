@@ -1,13 +1,15 @@
 using UnityEngine;
 
-namespace IP1.Interaction
+namespace IP1
 {
-    public class MouseFollower : MonoBehaviour
+    public class MouseVelocityFollower : MonoBehaviour
     {
         private Camera m_camera;
         
         [SerializeField] private bool m_xFollow = true;
         [SerializeField] private bool m_yFollow = true;
+
+        private Vector3 m_lastMouseWorldPosition;
 
         private void Awake()
         {
@@ -26,7 +28,9 @@ namespace IP1.Interaction
             if (!m_yFollow) { mouseWorldPosition.y = transform.position.y; }
             mouseWorldPosition.z = 0;
 
-            transform.position = mouseWorldPosition;
+            var difference = m_lastMouseWorldPosition - mouseWorldPosition;
+
+            m_lastMouseWorldPosition = mouseWorldPosition;
         }
     }
 }

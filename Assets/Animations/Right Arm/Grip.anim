@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 11.174}
+        value: {x: 0, y: 0, z: 4.959}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -35,7 +35,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 9.52}
+        value: {x: 0, y: 0, z: 12.608}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -51,7 +51,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 27.158}
+        value: {x: 0, y: 0, z: 22.319}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -83,7 +83,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 3.844}
+        value: {x: 0, y: 0, z: 11.387}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -99,7 +99,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -23.671}
+        value: {x: 0, y: 0, z: -26.157}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -115,7 +115,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: -13.589}
+        value: {x: 0, y: 0, z: -15.754}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -131,7 +131,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 32.591}
+        value: {x: 0, y: 0, z: 34.21}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -595,7 +595,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 11.174
+        value: 4.959
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -658,7 +658,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 9.52
+        value: 12.608
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -721,7 +721,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 27.158
+        value: 22.319
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -847,7 +847,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 3.844
+        value: 11.387
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -910,7 +910,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -23.671
+        value: -26.157
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -973,7 +973,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -13.589
+        value: -15.754
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1036,7 +1036,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 32.591
+        value: 34.21
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1852,7 +1852,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59/bone_9
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1864,7 +1864,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59/bone_9
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1876,7 +1876,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59/bone_9
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1888,7 +1888,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1900,7 +1900,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1912,7 +1912,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1960,7 +1960,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20/bone_19/bone_6
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1972,7 +1972,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20/bone_19/bone_6
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1984,7 +1984,43 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20/bone_19/bone_6
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59/bone_9
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59/bone_9
+    classID: 4
+    script: {fileID: 0}
+    flags: 0
+  - serializedVersion: 2
+    curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_7/bone_8/bone_59/bone_9
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2031,8 +2067,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20
+    attribute: m_LocalEulerAngles.z
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_16/bone_17/bone_62
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2044,19 +2080,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_16/bone_17/bone_62
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2068,31 +2092,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20/bone_19/bone_6
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20/bone_19/bone_6
-    classID: 4
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5/bone_20/bone_19/bone_6
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_16/bone_17/bone_62
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2500,7 +2500,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_16/bone_17/bone_62
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2512,7 +2512,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_16/bone_17/bone_62
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -2524,7 +2524,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_16/bone_17/bone_62
+    path: Right Arm/bone_1/bone_58/bone_38/bone_57/bone_28/bone_56/bone_37/bone_55/bone_22/bone_54/bone_36/bone_53/bone_27/bone_52/bone_35/bone_51/bone_2/bone_50/bone_34/bone_49/bone_26/bone_48/bone_33/bone_47/bone_23/bone_46/bone_32/bone_45/bone_25/bone_44/bone_31/bone_43/bone_3/bone_42/bone_29/bone_41/bone_24/bone_40/bone_30/bone_39/bone_21/bone_4/bone_5
     classID: 4
     script: {fileID: 0}
     flags: 0
