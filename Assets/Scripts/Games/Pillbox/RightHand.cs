@@ -1,37 +1,30 @@
 using System;
 using UnityEngine;
 
-namespace IP1.Games.Pillbox
+namespace IP1
 {
-    [RequireComponent(typeof(Animator))]
     public class RightHand : MonoBehaviour
     {
-        private Animator m_animator;
-
-        private bool m_gripping;
-
-        [SerializeField] private string m_grippingParameterName = "Gripping";
-
         [SerializeField] private LayerMask m_interactableLayerMask;
         [SerializeField] private Transform m_interactionPoint;
         [SerializeField] private float m_interactionCastRadius = 1.0f;
+        
+        private bool m_gripping;
+
+        private Vector3 m_lastPosition;
 
         private Transform m_pillSheet;
 
-        private Vector3 m_lastPosition;
-        
+        public Action<bool> OnGrippingChanged;
+
         private void Awake()
         {
-            m_animator = GetComponent<Animator>();
+            OnGrippingChanged += GripChange;
         }
 
         private void Update()
         {
-            var gripping = Input.GetMouseButton(0);
-            if (gripping == m_gripping) { return; }
-            
-            m_gripping = gripping;
-            OnGrippingChanged(m_gripping);
+            CheckInput();
         }
 
         private void LateUpdate()
@@ -47,11 +40,17 @@ namespace IP1.Games.Pillbox
             m_lastPosition = position;
         }
 
-        private void OnGrippingChanged(bool _gripping)
+        private void CheckInput()
         {
-            m_animator.SetBool(m_grippingParameterName, _gripping);
+            var gripping = Input.GetMouseButton(0);
+            if (gripping == m_gripping) { return; }
             
-            // TODO: Release object if it falls out of hands
+            m_gripping = gripping;
+            OnGrippingChanged?.Invoke(m_gripping);
+        }
+
+        private void GripChange(bool _gripping)
+        {
             if (_gripping)
             {
                 var rayHit = Physics2D.CircleCast(m_interactionPoint.position, m_interactionCastRadius, Vector2.up, 0, m_interactableLayerMask);

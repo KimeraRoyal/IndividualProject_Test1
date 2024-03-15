@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_xFollow: 0
   m_yFollow: 1
-  m_speed: {x: 1, y: 25}
+  m_speed: {x: 1, y: 50}
 --- !u!114 &1401995929
 MonoBehaviour:
   m_ObjectHideFlags: 0
