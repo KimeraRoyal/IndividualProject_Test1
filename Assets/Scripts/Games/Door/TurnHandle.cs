@@ -16,10 +16,8 @@ namespace IP1
 
         [SerializeField] private Vector2 m_handleHoldPointSpeed = Vector2.one;
 
-        [SerializeField] private float m_angle;
-
         private bool m_handleHeld;
-        private Vector3 m_handleHoldPoint;
+        private Vector2 m_handleHoldPoint;
         
         private void Awake()
         {
@@ -31,6 +29,8 @@ namespace IP1
 
         private void Start()
         {
+            m_handleHoldPoint = (Vector2) m_handle.transform.position + Vector2.left;
+            
             m_mouseClick.OnClickingChanged += OnClickingChanged;
             m_mouseClick.OnInteractableClicked += OnInteractableClicked;
             
@@ -41,22 +41,14 @@ namespace IP1
         {
             if (!m_handleHeld) { return; }
 
-            m_handleHoldPoint += new Vector3(_mouseDelta.x * m_handleHoldPointSpeed.x, _mouseDelta.y * m_handleHoldPointSpeed.y, 0);
+            m_handleHoldPoint += new Vector2(_mouseDelta.x * m_handleHoldPointSpeed.x, _mouseDelta.y * m_handleHoldPointSpeed.y);
         }
 
         private void Update()
         {
-            CalculateAngle();
-        }
-
-        private void CalculateAngle()
-        {
-            if (!m_handleHeld) { return; }
-
-            m_angle = -90 + Vector3.SignedAngle(m_handle.transform.position, m_handleHoldPoint, Vector3.forward);
             m_holdPointIndicator.transform.position = m_handleHoldPoint;
             
-            m_handle.SetAngle(m_angle);
+            m_handle.SetAngle(180 - CalculateAngleAroundHandle(m_handle.transform.position, m_handleHoldPoint));
         }
 
         private void OnClickingChanged(bool _clicking)
@@ -64,16 +56,17 @@ namespace IP1
             if(_clicking || !m_handleHeld) { return; }
 
             m_handleHeld = false;
-            
-            m_handleHoldPoint = Vector3.zero;
+            m_handleHoldPoint = (Vector2) m_handle.transform.position + Vector2.left;
         }
 
         private void OnInteractableClicked(RaycastHit _rayHit)
         {
             m_handleHeld = true;
-            
             m_handleHoldPoint = _rayHit.point;
             m_handleHoldPoint.y = m_handle.transform.position.y;
         }
+
+        private static float CalculateAngleAroundHandle(Vector2 _center, Vector2 _point)
+            => Mathf.Atan2(_point.y - _center.y, _point.x - _center.x) * Mathf.Rad2Deg;
     }
 }
