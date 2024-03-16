@@ -11,8 +11,6 @@ namespace IP1.Interaction
 
         private bool m_clicking;
 
-        public Transform m_objectToMove;
-
         public Action<bool> OnClickingChanged;
         
         public Action<RaycastHit> OnInteractableClicked;
@@ -26,8 +24,6 @@ namespace IP1.Interaction
         private void Start()
         {
             OnClickingChanged += Click;
-            OnInteractableClicked += _rayHit => { m_objectToMove.position = _rayHit.point; };
-            OnInteractableHeld += _rayHit => { m_objectToMove.position = Vector3.Lerp(m_objectToMove.position, _rayHit.point, 0.1f); };
         }
 
         private void Update()
@@ -73,9 +69,17 @@ namespace IP1.Interaction
             var localMouseRay = mouseWorldPosition - cameraPosition;
 
             var ray = new Ray(cameraPosition, localMouseRay.normalized);
-            Debug.DrawRay(ray.origin, ray.direction * localMouseRay.magnitude, Color.red, 1);
 
-            return Physics.Raycast(ray, out o_rayHit, localMouseRay.magnitude, m_interactableLayerMask);
+            if (Physics.Raycast(ray, out o_rayHit, localMouseRay.magnitude, m_interactableLayerMask))
+            {
+                Debug.DrawRay(ray.origin, ray.direction * o_rayHit.distance, Color.green, 0.01f);
+                return true;
+            }
+            else
+            {
+                Debug.DrawRay(ray.origin, ray.direction * localMouseRay.magnitude, Color.red, 0.01f);
+                return false;
+            }
         }
     }
 }
