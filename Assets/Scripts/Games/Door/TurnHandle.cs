@@ -12,12 +12,12 @@ namespace IP1
         private MouseClick m_mouseClick;
         private MouseMovement m_mouseMovement;
 
-        [SerializeField] private Transform m_holdPointIndicator;
-
         [SerializeField] private Vector2 m_handleHoldPointSpeed = Vector2.one;
 
         private bool m_handleHeld;
         private Vector2 m_handleHoldPoint;
+
+        private bool m_open;
         
         private void Awake()
         {
@@ -35,6 +35,12 @@ namespace IP1
             m_mouseClick.OnInteractableClicked += OnInteractableClicked;
             
             m_mouseMovement.OnMouseMoved += OnMouseMoved;
+            
+            m_handle.OnOpened += () =>
+            {
+                m_open = true;
+                m_mouseClick.Enabled = false;
+            };
         }
 
         private void OnMouseMoved(Vector2 _mouseDelta)
@@ -46,7 +52,7 @@ namespace IP1
 
         private void Update()
         {
-            m_holdPointIndicator.transform.position = m_handleHoldPoint;
+            if (m_open) { return; }
             
             m_handle.SetAngle(180 - CalculateAngleAroundHandle(m_handle.transform.position, m_handleHoldPoint));
         }

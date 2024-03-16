@@ -6,8 +6,13 @@ namespace IP1.Interaction
     public class MouseClick : MonoBehaviour
     {
         private Camera m_camera;
+
+        [SerializeField] private bool m_enabled = true;
         
         [SerializeField] private LayerMask m_interactableLayerMask;
+
+        [SerializeField] private bool m_shootRays = true;
+        [SerializeField] private bool m_trackHeld;
 
         private bool m_clicking;
 
@@ -15,6 +20,20 @@ namespace IP1.Interaction
         
         public Action<RaycastHit> OnInteractableClicked;
         public Action<RaycastHit> OnInteractableHeld;
+
+        public bool Enabled
+        {
+            get => m_enabled;
+            set
+            {
+                m_enabled = value;
+                
+                if (m_enabled || !m_clicking) { return; }
+                
+                m_clicking = false;
+                OnClickingChanged?.Invoke(m_clicking);
+            }
+        }
 
         private void Awake()
         {
@@ -28,6 +47,8 @@ namespace IP1.Interaction
 
         private void Update()
         {
+            if(!m_enabled) { return; }
+            
             CheckInput();
             HoldInput();
         }
@@ -43,7 +64,7 @@ namespace IP1.Interaction
 
         private void HoldInput()
         {
-            if (!m_clicking) { return; }
+            if (!m_clicking || !m_trackHeld) { return; }
 
             if (!ShootRay(out var rayHit)) { return; }
             
@@ -61,6 +82,12 @@ namespace IP1.Interaction
 
         private bool ShootRay(out RaycastHit o_rayHit)
         {
+            if (!m_shootRays)
+            {
+                o_rayHit = new RaycastHit();
+                return false;
+            }
+            
             var mousePosition = Input.mousePosition;
             mousePosition.z = m_camera.farClipPlane;
             
