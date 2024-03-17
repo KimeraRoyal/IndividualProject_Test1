@@ -180,7 +180,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2676784386456141847}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &4291145439664767558
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -261,6 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5808383792577672729}
+  - component: {fileID: 275100287647757642}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -284,6 +285,21 @@ Transform:
   - {fileID: 4896498310503938088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275100287647757642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716027220473141253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff02adf3589a1aa4da02bb3f0618a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_openRotation: {x: 0.5, y: -95, z: 0}
+  m_openTime: 3
+  m_openEasing: 30
 --- !u!1 &8736650845271843295
 GameObject:
   m_ObjectHideFlags: 0

@@ -559,7 +559,9 @@ GameObject:
   m_Component:
   - component: {fileID: 84922858}
   - component: {fileID: 84922859}
+  - component: {fileID: 84922866}
   - component: {fileID: 84922860}
+  - component: {fileID: 84922867}
   - component: {fileID: 84922864}
   - component: {fileID: 84922865}
   m_Layer: 0
@@ -619,11 +621,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_grippingParameterName: Gripping
-  m_interactableLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  m_interactionPoint: {fileID: 1765991456}
-  m_interactionCastRadius: 0.45
 --- !u!114 &84922864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +653,41 @@ MonoBehaviour:
   m_minBounds: {x: -5, y: 0}
   m_maxBounds: {x: 16, y: 0}
   m_useLocalPosition: 1
+--- !u!114 &84922866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84922857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7504ec9cb35424f8d35f2ccfe7a287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enabled: 1
+  m_interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_shootRays: 0
+  m_trackHeld: 0
+--- !u!114 &84922867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84922857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a826ddf9eaa9448af5cc300e647ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_interactionPoint: {fileID: 1765991456}
+  m_interactionCastRadius: 0.83
 --- !u!1 &126467494
 GameObject:
   m_ObjectHideFlags: 0
