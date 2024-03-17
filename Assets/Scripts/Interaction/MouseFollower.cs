@@ -13,6 +13,9 @@ namespace IP1.Interaction
         [SerializeField] private bool m_yFollow = true;
 
         [SerializeField] private float m_movementSmoothing = 0.1f;
+
+        [SerializeField] private Vector3 m_offset;
+        [SerializeField] private Vector3 m_scale = Vector3.one;
         
         private Vector3 m_targetPosition;
         private Vector3 m_movementVelocity;
@@ -66,7 +69,7 @@ namespace IP1.Interaction
             if (!m_yFollow) { mouseWorldPosition.y = transform.localPosition.y; }
             mouseWorldPosition.z = z;
 
-            m_targetPosition = mouseWorldPosition;
+            m_targetPosition = new Vector3(mouseWorldPosition.x * m_scale.x, mouseWorldPosition.y * m_scale.y, mouseWorldPosition.z * m_scale.z) + m_offset;
         }
     }
 }
