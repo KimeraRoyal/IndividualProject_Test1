@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 895269610590601988, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 895269610590601988, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_LocalPosition.z
@@ -293,6 +293,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+--- !u!4 &520830423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4253504150605669630, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+  m_PrefabInstance: {fileID: 520830422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &847820337
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +618,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2167236780934046192, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3636165525791513126, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
       propertyPath: m_Name
       value: Paper Arm
@@ -801,6 +810,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 3039119812904752172, guid: 12c3b933d0fc2864f85f649d12cf9d0e, type: 3}
+      propertyPath: m_target
+      value: 
+      objectReference: {fileID: 520830423}
+    - target: {fileID: 4833776123018515782, guid: 12c3b933d0fc2864f85f649d12cf9d0e, type: 3}
+      propertyPath: m_boxcastOrigin.x
+      value: -3.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833776123018515782, guid: 12c3b933d0fc2864f85f649d12cf9d0e, type: 3}
+      propertyPath: m_shadowMoveDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833776123018515782, guid: 12c3b933d0fc2864f85f649d12cf9d0e, type: 3}
+      propertyPath: m_boxcastLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5217386540295457383, guid: 12c3b933d0fc2864f85f649d12cf9d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -841,6 +866,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8491613460440487062, guid: 12c3b933d0fc2864f85f649d12cf9d0e, type: 3}
+      propertyPath: m_target
+      value: 
+      objectReference: {fileID: 520830423}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

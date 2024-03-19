@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895269610590601988}
+  - component: {fileID: 199563639484792051}
   m_Layer: 0
   m_Name: Stamp Arm
   m_TagString: Untagged
@@ -30,7 +31,57 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2761267111517109878}
+  - {fileID: 4253504150605669630}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &199563639484792051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328162388719472227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c8bacba262bd745bc87831b2af1a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enabled: 1
+  m_xFollow: 1
+  m_yFollow: 0
+  m_movementSmoothing: 0.8
+  m_offset: {x: 0, y: 0, z: 0}
+  m_scale: {x: 0.04, y: 1, z: 1}
+--- !u!1 &7001091354436830864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4253504150605669630}
+  m_Layer: 0
+  m_Name: Stamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4253504150605669630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7001091354436830864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 895269610590601988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3566336083285755816
 PrefabInstance:
@@ -181,6 +232,7 @@ MonoBehaviour:
   - {fileID: -5391329975404220774, guid: a4f58ae7237d021468858f2497680072, type: 3}
   - {fileID: 5701701706230510640, guid: a4f58ae7237d021468858f2497680072, type: 3}
   m_frameTime: 0.5
+  m_frameTimeVariance: 0
 --- !u!4 &2761267111517109878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: a4f58ae7237d021468858f2497680072, type: 3}
@@ -208,3 +260,4 @@ MonoBehaviour:
   - {fileID: 6265244329440850661, guid: a4f58ae7237d021468858f2497680072, type: 3}
   - {fileID: 4371260990145029639, guid: a4f58ae7237d021468858f2497680072, type: 3}
   m_frameTime: 0.2
+  m_frameTimeVariance: 0

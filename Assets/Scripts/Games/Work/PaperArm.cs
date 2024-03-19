@@ -37,9 +37,10 @@ namespace IP1
 
         private void Start()
         {
-            OnPaperCreated += _paper => { _paper.transform.position += m_paperStack.CurrentPaperOffset; };
             OnPaperDropped += m_paperStack.AddPaper;
-            
+
+            m_paperStack.OnPaperAdded += _paper => { m_startingPosition += m_paperStack.PaperOffset; };
+
             SpawnPaper();
         }
 
@@ -63,7 +64,7 @@ namespace IP1
             OnPaperCreated?.Invoke(m_heldPaper);
 
             m_sequence = DOTween.Sequence();
-            m_sequence.Append(localTransform.DOMove(Vector3.zero, m_handInTime).SetEase(m_handInEase));
+            m_sequence.Append(localTransform.DOMove(m_paperStack.CurrentPaperOffset, m_handInTime).SetEase(m_handInEase));
             m_sequence.AppendCallback(DropPaper);
             m_sequence.AppendInterval(m_dropPaperWaitTime);
             m_sequence.Append(localTransform.DOMove(m_startingPosition, m_handOutTime).SetEase(m_handOutEase));

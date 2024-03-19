@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IP1
 {
-    public class StampShadow : MonoBehaviour
+    public class MoveWithPaperStack : MonoBehaviour
     {
         private PaperStack m_paperStack;
 

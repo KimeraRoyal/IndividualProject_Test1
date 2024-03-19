@@ -4,6 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace IP1
 {
+    [RequireComponent(typeof(SpriteRenderer))]
     public class SpriteAnimation : MonoBehaviour
     {
         private SpriteRenderer m_spriteRenderer;
