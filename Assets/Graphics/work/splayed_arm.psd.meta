@@ -99,7 +99,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: hand
+  - name: arm_outline0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -108,8 +108,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 881
-      height: 374
+      width: 952
+      height: 510
     spriteID: 2d212585cb001ed4d9029e82b05178f3
     spriteBone: []
     spriteOutline: []
@@ -119,7 +119,70 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 69, y: 126}
+    spritePosition: {x: 0, y: 26}
+  - name: arm_outline1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 522
+      width: 953
+      height: 510
+    spriteID: 6e91aa621c1e3cb4893b86a508c01b84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 522}
+    spritePosition: {x: 1, y: 26}
+  - name: arm_outline2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1040
+      width: 952
+      height: 510
+    spriteID: f470e460fce1eaf4b9aaab0f11384a04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1040}
+    spritePosition: {x: 0, y: 26}
+  - name: hand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 962
+      y: 4
+      width: 948
+      height: 508
+    spriteID: 2581ed51a55a99e459c27b001e2d081e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 962, y: 4}
+    spritePosition: {x: 0, y: 28}
   characterData:
     bones: []
     parts: []
@@ -202,13 +265,43 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: hand
-    spriteName: hand
+  - name: arm_outline0
+    spriteName: arm_outline0
     isGroup: 0
     parentIndex: -1
     spriteID: 2d212585cb001ed4d9029e82b05178f3
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: arm_outline1
+    spriteName: arm_outline1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6e91aa621c1e3cb4893b86a508c01b84
+    layerID: -236768572
+    mosaicPosition: {x: 4, y: 522}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: arm_outline2
+    spriteName: arm_outline2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f470e460fce1eaf4b9aaab0f11384a04
+    layerID: -1802852513
+    mosaicPosition: {x: 4, y: 1040}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: hand
+    spriteName: hand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2581ed51a55a99e459c27b001e2d081e
+    layerID: 762134947
+    mosaicPosition: {x: 962, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
