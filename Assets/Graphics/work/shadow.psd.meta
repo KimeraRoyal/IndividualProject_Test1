@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c31189b327cc4d4d96922f47060c43d
+guid: 60a9c4e29a0af4842b4ed94a2c7042cd
 importerOverride:
   nativeImporterType: 2089858483
   scriptedImporterType:
@@ -99,7 +99,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: hand
+  - name: shadow0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -108,9 +108,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 881
-      height: 374
-    spriteID: 2d212585cb001ed4d9029e82b05178f3
+      width: 324
+      height: 44
+    spriteID: 1f314ad854df1c94fa1a9d8fa9d20616
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -119,7 +119,49 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 69, y: 126}
+    spritePosition: {x: 13, y: 3}
+  - name: shadow1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 56
+      width: 323
+      height: 44
+    spriteID: 37a3eb6bb359a6444857fa135f65da24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 56}
+    spritePosition: {x: 13, y: 3}
+  - name: shadow2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 108
+      width: 321
+      height: 43
+    spriteID: 32f70116aced7d34a83435489931d5af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 108}
+    spritePosition: {x: 14, y: 4}
   characterData:
     bones: []
     parts: []
@@ -202,13 +244,33 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: hand
-    spriteName: hand
+  - name: shadow0
+    spriteName: shadow0
     isGroup: 0
     parentIndex: -1
-    spriteID: 2d212585cb001ed4d9029e82b05178f3
+    spriteID: 1f314ad854df1c94fa1a9d8fa9d20616
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: shadow1
+    spriteName: shadow1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 37a3eb6bb359a6444857fa135f65da24
+    layerID: 1204766111
+    mosaicPosition: {x: 4, y: 56}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: shadow2
+    spriteName: shadow2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 32f70116aced7d34a83435489931d5af
+    layerID: 1204766112
+    mosaicPosition: {x: 4, y: 108}
     flatten: 0
     isImported: 1
     isVisible: 1

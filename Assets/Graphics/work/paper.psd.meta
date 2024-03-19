@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0c31189b327cc4d4d96922f47060c43d
+guid: a7a234abca177ac4e9ca120733f5838e
 importerOverride:
   nativeImporterType: 2089858483
   scriptedImporterType:
@@ -99,7 +99,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: hand
+  - name: paper_outline0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -108,9 +108,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 881
-      height: 374
-    spriteID: 2d212585cb001ed4d9029e82b05178f3
+      width: 490
+      height: 422
+    spriteID: a69ca925842b7b84092b61625effcd30
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -119,7 +119,70 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 69, y: 126}
+    spritePosition: {x: 61, y: 46}
+  - name: paper_outline1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 434
+      width: 490
+      height: 421
+    spriteID: 1803e1e762cda644ea336c31cff1c21d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 434}
+    spritePosition: {x: 61, y: 46}
+  - name: paper_outline2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 502
+      y: 435
+      width: 488
+      height: 422
+    spriteID: 7ddec6f3134a3724ebd048af994e5f7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 502, y: 435}
+    spritePosition: {x: 62, y: 46}
+  - name: paper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 502
+      y: 4
+      width: 487
+      height: 423
+    spriteID: a984f46a8f6aca843b6ec9e38c3cd06a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 502, y: 4}
+    spritePosition: {x: 63, y: 44}
   characterData:
     bones: []
     parts: []
@@ -202,13 +265,43 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: hand
-    spriteName: hand
+  - name: paper_outline0
+    spriteName: paper_outline0
     isGroup: 0
     parentIndex: -1
-    spriteID: 2d212585cb001ed4d9029e82b05178f3
+    spriteID: a69ca925842b7b84092b61625effcd30
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: paper_outline1
+    spriteName: paper_outline1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1803e1e762cda644ea336c31cff1c21d
+    layerID: 1420143832
+    mosaicPosition: {x: 4, y: 434}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: paper_outline2
+    spriteName: paper_outline2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7ddec6f3134a3724ebd048af994e5f7b
+    layerID: 1823428359
+    mosaicPosition: {x: 502, y: 435}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: paper
+    spriteName: paper
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a984f46a8f6aca843b6ec9e38c3cd06a
+    layerID: -1779183908
+    mosaicPosition: {x: 502, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1

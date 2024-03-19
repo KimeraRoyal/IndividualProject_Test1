@@ -1,0 +1,24 @@
+using UnityEngine;
+
+namespace IP1
+{
+    public class StampShadow : MonoBehaviour
+    {
+        private PaperStack m_paperStack;
+
+        private void Awake()
+        {
+            m_paperStack = FindObjectOfType<PaperStack>();
+        }
+
+        private void Start()
+        {
+            m_paperStack.OnPaperAdded += OnPaperAdded;
+        }
+
+        private void OnPaperAdded(Paper _paper)
+        {
+            transform.position += m_paperStack.PaperOffset;
+        }
+    }
+}

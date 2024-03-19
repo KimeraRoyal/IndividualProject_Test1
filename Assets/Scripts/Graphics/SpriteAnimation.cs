@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace IP1
 {
@@ -10,15 +11,19 @@ namespace IP1
         [SerializeField] private Sprite[] m_frames;
 
         [SerializeField] private float m_frameTime = 1.0f;
+        [SerializeField] private float m_frameTimeVariance = 0.0f;
 
         private int m_currentFrame;
         private float m_timer;
+        private float m_uniqueFrameTime;
 
         public Action<int> OnFrameChange;
         
         private void Awake()
         {
             m_spriteRenderer = GetComponent<SpriteRenderer>();
+
+            m_uniqueFrameTime = Random.Range(m_frameTime - m_frameTimeVariance, m_frameTime + m_frameTimeVariance);
         }
 
         private void Start()
@@ -29,8 +34,8 @@ namespace IP1
         private void Update()
         {
             m_timer += Time.deltaTime;
-            if(m_timer < m_frameTime) { return; }
-            m_timer -= m_frameTime;
+            if(m_timer < m_uniqueFrameTime) { return; }
+            m_timer -= m_uniqueFrameTime;
 
             m_currentFrame = (m_currentFrame + 1) % m_frames.Length;
             OnFrameChange?.Invoke(m_currentFrame);
