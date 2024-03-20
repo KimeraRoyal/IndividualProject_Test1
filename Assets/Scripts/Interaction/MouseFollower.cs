@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace IP1.Interaction
 {
-    public class MouseFollower : MonoBehaviour
+    public class MouseFollower : Mover
     {
         private Camera m_camera;
 
@@ -12,13 +12,8 @@ namespace IP1.Interaction
         [SerializeField] private bool m_xFollow = true;
         [SerializeField] private bool m_yFollow = true;
 
-        [SerializeField] private float m_movementSmoothing = 0.1f;
-
         [SerializeField] private Vector3 m_offset;
         [SerializeField] private Vector3 m_scale = Vector3.one;
-        
-        private Vector3 m_targetPosition;
-        private Vector3 m_movementVelocity;
 
         public bool Enabled
         {
@@ -26,31 +21,16 @@ namespace IP1.Interaction
             set => m_enabled = value;
         }
 
-        public Vector3 TargetPosition
-        {
-            get => m_targetPosition;
-            set
-            {
-                if (m_enabled) { return; }
-                m_targetPosition = value;
-            }
-        }
-
         private void Awake()
         {
             m_camera = FindObjectOfType<Camera>();
         }
 
-        private void Start()
-        {
-            m_targetPosition = transform.localPosition;
-        }
-
-        private void Update()
+        protected override void Update()
         {
             CalculatePosition();
 
-            transform.localPosition = Vector3.SmoothDamp(transform.localPosition, m_targetPosition, ref m_movementVelocity, m_movementSmoothing);
+            base.Update();
         }
 
         private void CalculatePosition()
@@ -69,7 +49,7 @@ namespace IP1.Interaction
             if (!m_yFollow) { mouseWorldPosition.y = transform.localPosition.y; }
             mouseWorldPosition.z = z;
 
-            m_targetPosition = new Vector3(mouseWorldPosition.x * m_scale.x, mouseWorldPosition.y * m_scale.y, mouseWorldPosition.z * m_scale.z) + m_offset;
+            TargetPosition = new Vector3(mouseWorldPosition.x * m_scale.x, mouseWorldPosition.y * m_scale.y, mouseWorldPosition.z * m_scale.z) + m_offset;
         }
     }
 }

@@ -46,12 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c8bacba262bd745bc87831b2af1a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_movementSmoothing: 0.4
   m_enabled: 1
   m_xFollow: 1
   m_yFollow: 0
-  m_movementSmoothing: 1
   m_offset: {x: 0, y: 0, z: 0}
-  m_scale: {x: 0.04, y: 1, z: 1}
+  m_scale: {x: 0.03, y: 1, z: 1}
 --- !u!114 &4833776123018515782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +64,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a9dc74c33a603468979a1db5ecaec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_boxcastLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_boxcastOrigin: {x: -3.24, y: 0}
+  m_boxcastSize: {x: 1, y: 1}
+  m_shadowMoveDuration: 0.1
+  m_shadowMoveEase: 1
 --- !u!1 &3524968938603460044
 GameObject:
   m_ObjectHideFlags: 0
