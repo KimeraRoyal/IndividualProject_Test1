@@ -14,7 +14,7 @@ namespace IP1.Interaction
         private Vector3 m_targetPosition;
         private Vector3 m_velocity;
 
-        public Vector2 TargetPosition
+        public Vector3 TargetPosition
         {
             get => m_targetPosition;
             set

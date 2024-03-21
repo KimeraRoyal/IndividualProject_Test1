@@ -193,7 +193,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893811478558451852}
-  - component: {fileID: 4090972648812791048}
   - component: {fileID: 2710161338664414615}
   - component: {fileID: 7761889750422169313}
   - component: {fileID: 5303319622101437416}
@@ -222,20 +221,6 @@ Transform:
   - {fileID: 3136696044763351750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4090972648812791048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2500404750180478206}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766961d333b6d1e438ab914e7c70522e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_target: {fileID: 0}
-  m_multiply: -1
 --- !u!114 &2710161338664414615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,10 +251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c8bacba262bd745bc87831b2af1a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_movementSmoothing: 0.05
   m_enabled: 1
   m_xFollow: 1
   m_yFollow: 1
-  m_movementSmoothing: 0.05
+  m_offset: {x: 0, y: 0, z: 0}
+  m_scale: {x: 1, y: 1, z: 1}
 --- !u!114 &5303319622101437416
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ namespace IP1.Interaction
             if (m_xFollow) { movement.x = Input.GetAxis("Mouse X"); }
             if (m_yFollow) { movement.y = Input.GetAxis("Mouse Y"); }
 
-            var velocity = new Vector2(movement.x * m_speed.x, movement.y * m_speed.y);
+            var velocity = new Vector3(movement.x * m_speed.x, movement.y * m_speed.y);
             TargetPosition += velocity;
             
             base.Update();
