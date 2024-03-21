@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace IP1
 {
     public class Paper : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField] private GameObject m_stampMarkingPrefab;
+        [SerializeField] private Vector3 m_stampMarkingOffset;
         
-        }
-
-        // Update is called once per frame
-        void Update()
+        public void CreateStampMarking(Vector3 _stampPosition)
         {
-        
+            var position = _stampPosition;
+            position.z = transform.position.z;
+            position += m_stampMarkingOffset;
+            
+            Instantiate(m_stampMarkingPrefab, position, Quaternion.identity, transform);
         }
     }
 }

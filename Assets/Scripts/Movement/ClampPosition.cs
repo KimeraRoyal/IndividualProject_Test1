@@ -15,6 +15,9 @@ namespace IP1.Movement
         [SerializeField] private Vector2 m_minBounds, m_maxBounds;
 
         [SerializeField] private bool m_useLocalPosition;
+
+        public Vector2 MinBounds { get => m_minBounds; set => m_minBounds = value; }
+        public Vector2 MaxBounds { get => m_maxBounds; set => m_maxBounds = value; }
         
         private void Awake()
         {

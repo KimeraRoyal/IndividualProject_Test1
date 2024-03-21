@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ce4fc55b5a75842bbfeada90a53059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_stampMarkingPrefab: {fileID: 65495626022246758, guid: c3b19a83094209b41ad4337e91b9310a, type: 3}
+  m_stampMarkingOffset: {x: 0, y: -1, z: 0}
 --- !u!1001 &4902646792689552548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,6 +115,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3165517327863829960, guid: a7a234abca177ac4e9ca120733f5838e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 5121510083684124161, guid: a7a234abca177ac4e9ca120733f5838e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -131,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290629030774360991, guid: a7a234abca177ac4e9ca120733f5838e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895269610590601988}
-  - component: {fileID: 199563639484792051}
+  - component: {fileID: 974435576410730096}
+  - component: {fileID: 2921101067974987389}
+  - component: {fileID: 8579741179499194585}
   m_Layer: 0
   m_Name: Stamp Arm
   m_TagString: Untagged
@@ -34,7 +36,7 @@ Transform:
   - {fileID: 4253504150605669630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &199563639484792051
+--- !u!114 &974435576410730096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,15 +45,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 2328162388719472227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c8bacba262bd745bc87831b2af1a95, type: 3}
+  m_Script: {fileID: 11500000, guid: 21b58b0935e691745a2ee0256ffe9cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_enabled: 1
+  m_minReloadY: -0.5
+  m_maxStampY: -2.5
+  m_boxcastLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_boxcastOrigin: {x: 0, y: 0.3}
+  m_boxcastSize: {x: 5.5, y: 1}
+  m_stampPoint: {fileID: 4253504150605669630}
+--- !u!114 &2921101067974987389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328162388719472227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58542cfff5a8964eb5b8dbc5e60e69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_movementSmoothing: 0.1
   m_xFollow: 1
-  m_yFollow: 0
-  m_movementSmoothing: 0.8
-  m_offset: {x: 0, y: 0, z: 0}
-  m_scale: {x: 0.04, y: 1, z: 1}
+  m_yFollow: 1
+  m_speed: {x: 0.1, y: 0.4}
+--- !u!114 &8579741179499194585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328162388719472227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f589844922a2694196e96f0396eea57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_xClampToBounds: 1
+  m_yClampToBounds: 1
+  m_minBounds: {x: -1.5, y: -2.7}
+  m_maxBounds: {x: 1.5, y: 8}
+  m_useLocalPosition: 0
 --- !u!1 &7001091354436830864
 GameObject:
   m_ObjectHideFlags: 0
