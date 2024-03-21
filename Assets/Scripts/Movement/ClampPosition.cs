@@ -66,22 +66,25 @@ namespace IP1.Movement
         private Vector3 ClampAxis(int _axis, Vector3 _position)
         {
             var clamped = false;
-            
+
+            var rebound = 0;
             if (_position[_axis] < m_minBounds[_axis])
             {
                 _position[_axis] = m_minBounds[_axis];
                 clamped = true;
+                rebound = 1;
             }
             if (_position[_axis] > m_maxBounds[_axis])
             { 
                 _position[_axis] = m_maxBounds[_axis];
                 clamped = true;
+                rebound = -1;
             }
                 
             if (m_rigidbody && clamped)
             {
                 var velocity = m_rigidbody.velocity;
-                velocity[_axis] = 0.0f;
+                velocity[_axis] = rebound;
                 m_rigidbody.velocity = velocity;
             }
 
