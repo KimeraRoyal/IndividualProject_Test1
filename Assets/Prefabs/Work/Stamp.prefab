@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7550190475337276196}
+  - component: {fileID: -4906215846107013279}
   m_Layer: 0
   m_Name: Stamp
   m_TagString: Untagged
@@ -32,6 +33,23 @@ Transform:
   - {fileID: 5677517887217600635}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4906215846107013279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65495626022246758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f589844922a2694196e96f0396eea57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_xClampToBounds: 1
+  m_yClampToBounds: 0
+  m_minBounds: {x: -1, y: 0}
+  m_maxBounds: {x: 1, y: 0}
+  m_useLocalPosition: 1
 --- !u!1001 &6477669929626497445
 PrefabInstance:
   m_ObjectHideFlags: 0
