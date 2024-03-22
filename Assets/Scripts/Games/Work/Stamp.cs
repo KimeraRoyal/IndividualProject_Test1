@@ -11,12 +11,21 @@ namespace IP1
         
         [SerializeField] private float m_minReloadY;
         [SerializeField] private float m_maxStampY;
+
+        [SerializeField] private float m_minVelocityForStamping = 0.5f;
+        [SerializeField] private float m_minVelocityDegradation = 1.0f;
         
         [SerializeField] private LayerMask m_boxcastLayerMask;
         [SerializeField] private Vector2 m_boxcastOrigin;
         [SerializeField] private Vector2 m_boxcastSize = Vector2.one;
 
         [SerializeField] private Transform m_stampPoint;
+
+        private Vector3 m_lastPosition;
+        private float m_velocity;
+        
+        private float m_minVelocity;
+        private float m_minVelocitySmoothingVelocity;
 
         private bool m_loaded;
 
@@ -37,6 +46,7 @@ namespace IP1
         private void Update()
         {
             Reload();
+            CalculateVelocity();
             StampPaper();
         }
 
@@ -47,6 +57,15 @@ namespace IP1
             m_loaded = true;
         }
 
+        private void CalculateVelocity()
+        {
+            var position = transform.position;
+            m_velocity = (position - m_lastPosition).y;
+            m_minVelocity = Mathf.Min(m_minVelocity, m_velocity);
+            m_minVelocity = Mathf.SmoothDamp(m_minVelocity, 0.0f, ref m_minVelocitySmoothingVelocity, m_minVelocityDegradation);
+            m_lastPosition = position;
+        }
+
         private void StampPaper()
         {
             if(!m_loaded || transform.localPosition.y > m_maxStampY + m_paperStack.CurrentPaperOffset.y) { return; }
@@ -54,12 +73,15 @@ namespace IP1
             var rayHit = Physics2D.BoxCast((Vector2) transform.position + m_boxcastOrigin, m_boxcastSize, 0, Vector2.zero, 0, m_boxcastLayerMask);
             if(rayHit.collider == null) { return; }
 
-            var paper = rayHit.collider.GetComponentInParent<Paper>();
-            if (!paper) { return; }
+            if (Mathf.Abs(m_minVelocity) >= m_minVelocityForStamping)
+            {
+                var paper = rayHit.collider.GetComponentInParent<Paper>();
+                if (!paper) { return; }
             
-            paper.CreateStampMarking(m_stampPoint.position);
+                paper.CreateStampMarking(m_stampPoint.position);
 
-            rayHit.collider.enabled = false;
+                rayHit.collider.enabled = false;
+            }
             m_loaded = false;
         }
 

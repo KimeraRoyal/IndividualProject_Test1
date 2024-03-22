@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_stampMarkingPrefab: {fileID: 65495626022246758, guid: c3b19a83094209b41ad4337e91b9310a, type: 3}
-  m_stampMarkingOffset: {x: 0, y: -1, z: 0}
+  m_stampMarkingOffset: {x: 0, y: -0.6, z: 0}
 --- !u!1001 &4902646792689552548
 PrefabInstance:
   m_ObjectHideFlags: 0

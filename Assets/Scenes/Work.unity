@@ -285,6 +285,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_minVelocityDegradation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_minVelocityForStamping
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_boxcastLayerMask.m_Bits
       value: 128
       objectReference: {fileID: 0}
@@ -292,10 +300,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stamp Arm
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2921101067974987389, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2328162388719472227, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 520830425}
     - targetCorrespondingSourceObject: {fileID: 7001091354436830864, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1197693789}
@@ -305,6 +317,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4253504150605669630, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
   m_PrefabInstance: {fileID: 520830422}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &520830424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2328162388719472227, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+  m_PrefabInstance: {fileID: 520830422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &520830425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520830424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3774a9ec6c4be47a17cc6fb22ad05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_movementSmoothing: 0.1
+  m_xFollow: 1
+  m_yFollow: 1
+  m_backSpeed: {x: 0.1, y: 1.5}
+  m_forwardSpeed: {x: 0.1, y: 0.4}
 --- !u!1 &847820337
 GameObject:
   m_ObjectHideFlags: 0
