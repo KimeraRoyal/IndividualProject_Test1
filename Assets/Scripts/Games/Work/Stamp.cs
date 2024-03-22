@@ -47,7 +47,7 @@ namespace IP1
         {
             Reload();
             CalculateVelocity();
-            StampPaper();
+            DetectStamp();
         }
 
         private void Reload()
@@ -66,7 +66,7 @@ namespace IP1
             m_lastPosition = position;
         }
 
-        private void StampPaper()
+        private void DetectStamp()
         {
             if(!m_loaded || transform.localPosition.y > m_maxStampY + m_paperStack.CurrentPaperOffset.y) { return; }
 
@@ -75,14 +75,20 @@ namespace IP1
 
             if (Mathf.Abs(m_minVelocity) >= m_minVelocityForStamping)
             {
-                var paper = rayHit.collider.GetComponentInParent<Paper>();
-                if (!paper) { return; }
-            
-                paper.CreateStampMarking(m_stampPoint.position);
-
-                rayHit.collider.enabled = false;
+                StampPaper(rayHit.collider);
             }
             m_loaded = false;
+        }
+        
+
+        private void StampPaper(Behaviour _paperCollider)
+        {
+            var paper = _paperCollider.GetComponentInParent<Paper>();
+            if (!paper) { return; }
+            
+            paper.CreateStampMarking(m_stampPoint.position);
+
+            _paperCollider.enabled = false;
         }
 
         private void OnPaperAdded(Paper _paper)
