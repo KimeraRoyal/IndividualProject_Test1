@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.25
+      value: -9.625
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84,6 +84,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5904941143847474352, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5904941143847474352, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -5904941143847474352, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -357566679
+      objectReference: {fileID: 0}
+    - target: {fileID: -5904843523324647397, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5904843523324647397, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -5904843523324647397, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -357566679
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -1253017441302542437, guid: 74496173be3deb44d851117633f116f9, type: 3}
@@ -116,6 +140,7 @@ MonoBehaviour:
   - {fileID: 2226645856474015155, guid: 74496173be3deb44d851117633f116f9, type: 3}
   - {fileID: 1034129586379475152, guid: 74496173be3deb44d851117633f116f9, type: 3}
   m_frameTime: 0.3
+  m_frameTimeVariance: 0
 --- !u!4 &5892042320026151287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}

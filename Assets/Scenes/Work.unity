@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_minVelocityForStamping
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_boxcastLayerMask.m_Bits
