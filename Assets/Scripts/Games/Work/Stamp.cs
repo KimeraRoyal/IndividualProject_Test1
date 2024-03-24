@@ -73,7 +73,7 @@ namespace IP1
             var rayHit = Physics2D.BoxCast((Vector2) transform.position + m_boxcastOrigin, m_boxcastSize, 0, Vector2.zero, 0, m_boxcastLayerMask);
             if(rayHit.collider == null) { return; }
 
-            if (Mathf.Abs(m_minVelocity) >= m_minVelocityForStamping)
+            if (m_minVelocity < -m_minVelocityForStamping)
             {
                 StampPaper(rayHit.collider);
             }

@@ -285,14 +285,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
-      propertyPath: m_minVelocityDegradation
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
-      propertyPath: m_minVelocityForStamping
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_boxcastLayerMask.m_Bits
       value: 128
       objectReference: {fileID: 0}
@@ -334,11 +326,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3774a9ec6c4be47a17cc6fb22ad05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_movementSmoothing: 0.1
+  m_movementSmoothing: 0.01
   m_xFollow: 1
   m_yFollow: 1
-  m_backSpeed: {x: 0.1, y: 1.5}
-  m_forwardSpeed: {x: 0.1, y: 0.4}
+  m_backSpeed: {x: 0.1, y: 1}
+  m_forwardSpeed: {x: 0.1, y: 0.2}
 --- !u!1 &847820337
 GameObject:
   m_ObjectHideFlags: 0

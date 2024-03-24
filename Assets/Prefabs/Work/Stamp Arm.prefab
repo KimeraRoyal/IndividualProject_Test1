@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_minReloadY: -0.5
   m_maxStampY: -2.5
-  m_minVelocityForStamping: 0.5
-  m_minVelocityDegradation: 0.2
+  m_minVelocityForStamping: 0.2
+  m_minVelocityDegradation: 2
   m_boxcastLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_xClampToBounds: 1
   m_yClampToBounds: 1
   m_minBounds: {x: -1.5, y: -2.7}
-  m_maxBounds: {x: 1.5, y: 8}
+  m_maxBounds: {x: 1.5, y: 10}
   m_useLocalPosition: 0
 --- !u!1 &7001091354436830864
 GameObject:
@@ -272,6 +272,8 @@ MonoBehaviour:
   - {fileID: 5701701706230510640, guid: a4f58ae7237d021468858f2497680072, type: 3}
   m_frameTime: 0.5
   m_frameTimeVariance: 0
+  m_startOnRandomFrame: 0
+  m_randomize: 0
 --- !u!4 &2761267111517109878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: a4f58ae7237d021468858f2497680072, type: 3}
@@ -300,3 +302,5 @@ MonoBehaviour:
   - {fileID: 4371260990145029639, guid: a4f58ae7237d021468858f2497680072, type: 3}
   m_frameTime: 0.2
   m_frameTimeVariance: 0
+  m_startOnRandomFrame: 0
+  m_randomize: 0
