@@ -44,7 +44,7 @@ namespace IP1
         {
             OnFrameChange += _frame => { m_spriteRenderer.sprite = m_frames[_frame]; };
 
-            if (m_startOnRandomFrame) { RandomizeFrame(); }
+            if (m_startOnRandomFrame) { CurrentFrame = Random.Range(0, m_frames.Length); }
         }
 
         private void Update()
@@ -53,11 +53,8 @@ namespace IP1
             if(m_timer < m_uniqueFrameTime) { return; }
             m_timer -= m_uniqueFrameTime;
 
-            if(m_randomize) { RandomizeFrame(); }
+            if(m_randomize) { CurrentFrame = Random.Range(0, m_frames.Length); }
             else { CurrentFrame = (m_currentFrame + 1) % m_frames.Length; }
         }
-        
-        private void RandomizeFrame()
-            => CurrentFrame = Random.Range(0, m_frames.Length);
     }
 }

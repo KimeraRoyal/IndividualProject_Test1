@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -15,12 +14,14 @@ namespace IP1
         [SerializeField] private float m_frameTimeVariance = 0.0f;
 
         [SerializeField] private bool m_startOnRandomFrame;
+        [SerializeField] private bool m_randomize;
 
         public IReadOnlyList<Sprite> Frames => m_frames;
 
         public float FrameTime => m_frameTime;
         public float FrameTimeVariance => m_frameTimeVariance;
 
+        public bool Randomize => m_randomize;
         public bool StartOnRandomFrame => m_startOnRandomFrame;
     }
     
@@ -41,6 +42,9 @@ namespace IP1
             get => m_currentAnimation;
             set
             {
+                if(m_animations.Length < 1) { return; }
+                
+                value = Math.Clamp(value, 0, m_animations.Length);
                 m_currentAnimation = value;
                 OnAnimationChange?.Invoke(m_currentAnimation);
             }
@@ -53,6 +57,9 @@ namespace IP1
             get => m_currentFrame;
             set
             {
+                if(m_animations.Length < 1 || CurrentAnimation.Frames.Count < 1) { return; }
+                
+                value = Math.Clamp(value, 0, CurrentAnimation.Frames.Count);
                 m_currentFrame = value;
                 OnFrameChange?.Invoke(m_currentFrame);
             }
@@ -72,6 +79,20 @@ namespace IP1
             OnFrameChange += _frame => { m_spriteRenderer.sprite = CurrentAnimation.Frames[_frame]; };
 
             CurrentAnimationIndex = 0;
+        }
+
+        private void Update()
+        {
+            m_timer += Time.deltaTime;
+            if(m_timer < m_uniqueFrameTime) { return; }
+            m_timer -= m_uniqueFrameTime;
+
+            var frameCount = CurrentAnimation.Frames.Count;
+            
+            if(m_animations.Length < 1 || CurrentAnimation.Frames.Count < 1) { return; }
+
+            if (CurrentAnimation.Randomize) { CurrentFrame = Random.Range(0, CurrentAnimation.Frames.Count); }
+            else { CurrentFrame = (m_currentFrame + 1) % frameCount; }
         }
 
         private void StartAnimation(IndividualSpriteAnimation _animation)
