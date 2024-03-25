@@ -15,7 +15,7 @@ namespace IP1
         
         protected override void Update()
         {
-            if (!m_xFollow && !m_yFollow) { return; }
+            if (!Enabled || (!m_xFollow && !m_yFollow)) { return; }
             
             var movement = new Vector3();
             var speed = new Vector2();

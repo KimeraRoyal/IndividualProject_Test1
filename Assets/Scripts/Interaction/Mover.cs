@@ -9,10 +9,18 @@ namespace IP1.Interaction
         public Func<Vector3, Vector3> OnMoveTargetPosition;
         public Func<Vector3, Vector3> OnMove;
 
+        [SerializeField] private bool m_enabled = true;
+
         [SerializeField] private float m_movementSmoothing = 0.1f;
 
         private Vector3 m_targetPosition;
         private Vector3 m_velocity;
+
+        public bool Enabled
+        {
+            get => m_enabled;
+            set => m_enabled = value;
+        }
 
         public Vector3 TargetPosition
         {
@@ -34,6 +42,8 @@ namespace IP1.Interaction
 
         protected virtual void Update()
         {
+            if(!m_enabled) { return; }
+            
             var localTransform = transform;
             
             var newLocalPosition = Vector3.SmoothDamp(localTransform.localPosition, m_targetPosition, ref m_velocity, m_movementSmoothing);

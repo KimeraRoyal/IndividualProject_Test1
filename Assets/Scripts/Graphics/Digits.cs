@@ -11,6 +11,14 @@ namespace IP1
         [SerializeField] private int[] m_divisors;
         [SerializeField] private int m_ticks;
 
+        private int m_lastTicks = -1;
+
+        public int Ticks
+        {
+            get => m_ticks;
+            set => m_ticks = value;
+        }
+
         private void Awake()
         {
             m_digits = GetComponentsInChildren<Digit>();
@@ -18,6 +26,8 @@ namespace IP1
 
         private void Update()
         {
+            if(m_lastTicks == m_ticks) { return; }
+            
             var digits = new int[m_digits.Length];
             CalculateDigits(digits);
 
@@ -25,6 +35,8 @@ namespace IP1
             {
                 m_digits[i].CurrentDigit = digits[i];
             }
+
+            m_lastTicks = m_ticks;
         }
 
         private void CalculateDigits(IList<int> _digits)

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147230609809999940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6972233893734556538}
+  m_Layer: 0
+  m_Name: Interaction Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6972233893734556538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147230609809999940}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5892042320026151287}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7449658186558026870
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5697928982292292156}
+  - component: {fileID: 3649276977484525340}
+  - component: {fileID: 1508974870185140683}
+  - component: {fileID: 6692404685865199381}
   m_Layer: 0
   m_Name: Pointing Arm
   m_TagString: Untagged
@@ -32,6 +66,58 @@ Transform:
   - {fileID: 5892042320026151287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3649276977484525340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449658186558026870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c8bacba262bd745bc87831b2af1a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enabled: 1
+  m_movementSmoothing: 0.1
+  m_xFollow: 1
+  m_yFollow: 1
+  m_offset: {x: 0, y: 0, z: 0}
+  m_scale: {x: 1, y: 1, z: 1}
+--- !u!114 &1508974870185140683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449658186558026870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f589844922a2694196e96f0396eea57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_xClampToBounds: 0
+  m_yClampToBounds: 1
+  m_minBounds: {x: 0, y: -0.5}
+  m_maxBounds: {x: 0, y: 5}
+  m_useLocalPosition: 0
+--- !u!114 &6692404685865199381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449658186558026870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd15de5d7fa62c04a9f901711b3e3dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_interactionPoint: {fileID: 6972233893734556538}
+  m_interactionCastRadius: 0.15
 --- !u!1001 &5110296188434763945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,7 +132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: -0.15
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -112,7 +198,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: -1253017441302542437, guid: 74496173be3deb44d851117633f116f9, type: 3}
     - {fileID: -4883259444100391632, guid: 74496173be3deb44d851117633f116f9, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6972233893734556538}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2400045492551787475, guid: 74496173be3deb44d851117633f116f9, type: 3}
       insertIndex: -1
@@ -141,6 +230,8 @@ MonoBehaviour:
   - {fileID: 1034129586379475152, guid: 74496173be3deb44d851117633f116f9, type: 3}
   m_frameTime: 0.3
   m_frameTimeVariance: 0
+  m_startOnRandomFrame: 0
+  m_randomize: 0
 --- !u!4 &5892042320026151287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 74496173be3deb44d851117633f116f9, type: 3}

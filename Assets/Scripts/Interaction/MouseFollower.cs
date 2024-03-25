@@ -6,20 +6,12 @@ namespace IP1.Interaction
     public class MouseFollower : Mover
     {
         private Camera m_camera;
-
-        [SerializeField] private bool m_enabled = true;
         
         [SerializeField] private bool m_xFollow = true;
         [SerializeField] private bool m_yFollow = true;
 
         [SerializeField] private Vector3 m_offset;
         [SerializeField] private Vector3 m_scale = Vector3.one;
-
-        public bool Enabled
-        {
-            get => m_enabled;
-            set => m_enabled = value;
-        }
 
         private void Awake()
         {
@@ -35,7 +27,7 @@ namespace IP1.Interaction
 
         private void CalculatePosition()
         {
-            if (!m_enabled || (!m_xFollow && !m_yFollow)) { return; }
+            if (!Enabled || (!m_xFollow && !m_yFollow)) { return; }
 
             var z = transform.position.z;
             var zOffset = z - m_camera.transform.position.z;

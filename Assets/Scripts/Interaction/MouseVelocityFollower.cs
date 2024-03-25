@@ -11,7 +11,7 @@ namespace IP1.Interaction
 
         protected override void Update()
         {
-            if (!m_xFollow && !m_yFollow) { return; }
+            if (!Enabled || (!m_xFollow && !m_yFollow)) { return; }
             
             var movement = new Vector3();
             if (m_xFollow) { movement.x = Input.GetAxis("Mouse X"); }
