@@ -1,10 +1,14 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace IP1
 {
     public class Microwave : MonoBehaviour
     {
+        private Microgame m_microgame;
+        
         private Timer m_timer;
         
         private Digits m_digits;
@@ -20,9 +24,13 @@ namespace IP1
         [SerializeField] private GameObject m_lights;
 
         private bool m_on;
+
+        public Action OnActivated;
         
         private void Awake()
         {
+            m_microgame = GetComponentInParent<Microgame>();
+            
             m_timer = GetComponent<Timer>();
             
             m_digits = GetComponentInChildren<Digits>();
@@ -43,6 +51,8 @@ namespace IP1
                 button.OnPressedChange += OnIncidentalPressedChange;
             }
             m_startButton.OnPressedChange += OnPressedChange;
+
+            OnActivated += m_microgame.Clear;
         }
 
         private void OnTick()
@@ -72,6 +82,8 @@ namespace IP1
                 m_timer.enabled = true;
                 m_rotator.enabled = true;
             });
+
+            OnActivated?.Invoke();
         }
     }
 }

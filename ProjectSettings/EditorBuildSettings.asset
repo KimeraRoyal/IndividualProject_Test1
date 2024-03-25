@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Work.unity
-    guid: d15f5945fa2bb2440b0962953a0953e0
-  - enabled: 1
     path: Assets/Scenes/Pill Box.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Door Handle.unity
     guid: fc8a641634fec8c468e4e2c6d4fb7be1
+  - enabled: 1
+    path: Assets/Scenes/Breakfast.unity
+    guid: 55ef240c89928674a91086b499c47e85
+  - enabled: 1
+    path: Assets/Scenes/Work.unity
+    guid: d15f5945fa2bb2440b0962953a0953e0
+  - enabled: 1
+    path: Assets/Scenes/Waiting Room.unity
+    guid: 46d006e9b677ad44c9151228f808bf93
   m_configObjects: {}

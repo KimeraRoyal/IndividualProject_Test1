@@ -1,8 +1,10 @@
 {
-    "name": "IP1.Games.Pillbox",
+    "name": "IP1.Games.Door",
     "rootNamespace": "IP1",
     "references": [
         "GUID:285a67977dc99a94b965cba71b6c70b6",
+        "GUID:b0c1f539841d8b44aadca7dd378b44f8",
+        "GUID:d477fde24c5074d458bf34782d9a2314",
         "GUID:fbd260b72b17ec4429dba65d9d1ee532"
     ],
     "includePlatforms": [],

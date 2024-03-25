@@ -15,6 +15,17 @@ namespace IP1
 
         private Transform m_pillSheet;
 
+        public bool Gripping
+        {
+            get => m_gripping;
+            set
+            {
+                if (value == m_gripping) { return; }
+                m_gripping = value;
+                OnGrippingChanged?.Invoke(m_gripping);
+            }
+        }
+
         public Action<bool> OnGrippingChanged;
 
         private void Awake()
@@ -24,7 +35,8 @@ namespace IP1
 
         private void Update()
         {
-            CheckInput();
+            Gripping = Input.GetMouseButton(0);
+            Grip();
         }
 
         private void LateUpdate()
@@ -40,13 +52,14 @@ namespace IP1
             m_lastPosition = position;
         }
 
-        private void CheckInput()
+        private void Grip()
         {
-            var gripping = Input.GetMouseButton(0);
-            if (gripping == m_gripping) { return; }
+            if(!m_gripping) { return; }
             
-            m_gripping = gripping;
-            OnGrippingChanged?.Invoke(m_gripping);
+            var rayHit = Physics2D.CircleCast(m_interactionPoint.position, m_interactionCastRadius, Vector2.up, 0, m_interactableLayerMask);
+            if(rayHit.collider) { return; }
+
+            Gripping = false;
         }
 
         private void GripChange(bool _gripping)

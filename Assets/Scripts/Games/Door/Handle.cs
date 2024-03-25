@@ -5,6 +5,8 @@ namespace IP1
 {
     public class Handle : MonoBehaviour
     {
+        private Microgame m_microgame;
+        
         [SerializeField] private Transform m_gripPoint;
         
         [SerializeField] private float m_minAngle = -180;
@@ -29,6 +31,16 @@ namespace IP1
         public Action OnOpened;
 
         public Transform GripPoint => m_gripPoint;
+
+        private void Awake()
+        {
+            m_microgame = GetComponentInParent<Microgame>();
+        }
+
+        private void Start()
+        {
+            OnOpened += m_microgame.Clear;
+        }
 
         private void Update()
         {
