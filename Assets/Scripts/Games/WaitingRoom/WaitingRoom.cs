@@ -5,6 +5,8 @@ namespace IP1
 {
     public class WaitingRoom : MonoBehaviour
     {
+        private Microgame m_microgame;
+        
         private Clock m_clock;
 
         [SerializeField] private int m_waitForTicks = 1;
@@ -15,6 +17,8 @@ namespace IP1
 
         private void Awake()
         {
+            m_microgame = GetComponentInParent<Microgame>();
+            
             m_clock = FindObjectOfType<Clock>();
         }
 
@@ -22,7 +26,7 @@ namespace IP1
         {
             m_clock.OnTick += OnTick;
 
-            OnWaitComplete += () => { Debug.Log("Waited!"); };
+            OnWaitComplete += m_microgame.Clear;
         }
 
         private void OnTick(int _ticks)
