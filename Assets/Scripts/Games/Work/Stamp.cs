@@ -72,6 +72,7 @@ namespace IP1
         private void DetectStamp()
         {
             if(!m_loaded || transform.localPosition.y > m_maxStampY + m_paperStack.CurrentPaperOffset.y) { return; }
+            m_loaded = false;
 
             var rayHit = Physics2D.BoxCast((Vector2) transform.position + m_boxcastOrigin, m_boxcastSize, 0, Vector2.zero, 0, m_boxcastLayerMask);
             if(rayHit.collider == null) { return; }
@@ -80,7 +81,6 @@ namespace IP1
             {
                 StampPaper(rayHit.collider);
             }
-            m_loaded = false;
         }
         
 
