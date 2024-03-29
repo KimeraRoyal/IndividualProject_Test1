@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -7,9 +8,12 @@ namespace IP1
     public class PaperArm : MonoBehaviour
     {
         private PaperStack m_paperStack;
+        private Stamp m_stamp;
         
         [SerializeField] private Paper m_paperPrefab;
         [SerializeField] private Vector3 m_paperOffset;
+
+        [SerializeField] private float m_newPaperWaitTime = 1.0f;
 
         [SerializeField] private float m_handInTime = 1.0f;
         [SerializeField] private Ease m_handInEase = Ease.Linear;
@@ -31,6 +35,7 @@ namespace IP1
         private void Awake()
         {
             m_paperStack = FindObjectOfType<PaperStack>();
+            m_stamp = FindObjectOfType<Stamp>();
             
             m_startingPosition = transform.position;
         }
@@ -39,7 +44,8 @@ namespace IP1
         {
             OnPaperDropped += m_paperStack.AddPaper;
 
-            m_paperStack.OnPaperAdded += _paper => { m_startingPosition += m_paperStack.PaperOffset; };
+            m_paperStack.OnPaperAdded += OnPaperAdded;
+            m_stamp.OnPaperStamped += OnPaperStamped;
 
             SpawnPaper();
         }
@@ -47,11 +53,22 @@ namespace IP1
         private void Update()
         {
             if(m_heldPaper) { return; }
-            
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                SpawnPaper();
-            }
+        }
+
+        private void OnPaperAdded(Paper _paper)
+        {
+            m_startingPosition += m_paperStack.PaperOffset;
+        }
+
+        private void OnPaperStamped()
+        {
+            StartCoroutine(WaitForNewPaper());
+        }
+
+        private IEnumerator WaitForNewPaper()
+        {
+            yield return new WaitForSeconds(m_newPaperWaitTime);
+            SpawnPaper();
         }
 
         private void SpawnPaper()

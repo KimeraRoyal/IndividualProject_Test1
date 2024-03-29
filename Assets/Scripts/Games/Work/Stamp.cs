@@ -1,3 +1,4 @@
+using System;
 using IP1.Movement;
 using UnityEngine;
 
@@ -28,6 +29,8 @@ namespace IP1
         private float m_minVelocitySmoothingVelocity;
 
         private bool m_loaded;
+
+        public Action OnPaperStamped;
 
         private void Awake()
         {
@@ -89,6 +92,8 @@ namespace IP1
             paper.CreateStampMarking(m_stampPoint.position);
 
             _paperCollider.enabled = false;
+            
+            OnPaperStamped?.Invoke();
         }
 
         private void OnPaperAdded(Paper _paper)
