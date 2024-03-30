@@ -55,7 +55,7 @@ ScriptedImporter:
     flipbookColumns: 0
     ignorePngGamma: 0
     cookieMode: 0
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -108,9 +108,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 328
-      height: 67
-    spriteID: e90951ae9952bbb498b8a6b64a2ae046
+      width: 350
+      height: 75
+    spriteID: 25a751b015a8ce74087fce424254a05a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -129,9 +129,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 79
-      width: 328
-      height: 67
-    spriteID: 583a699b0ba49644e81bc274f73eae05
+      width: 350
+      height: 75
+    spriteID: e2ed3a25851d1d049b84045ba1cba142
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,9 +150,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 154
-      width: 328
-      height: 67
-    spriteID: 5529daf13f091c44497737ec49fc6f83
+      width: 350
+      height: 75
+    spriteID: 5ab5186da1725fc43bef2ce34dc2df98
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -177,7 +177,43 @@ ScriptedImporter:
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
   documentPivot: {x: 0, y: 0}
@@ -200,7 +236,7 @@ ScriptedImporter:
     spriteName: stamp0
     isGroup: 0
     parentIndex: -1
-    spriteID: e90951ae9952bbb498b8a6b64a2ae046
+    spriteID: 25a751b015a8ce74087fce424254a05a
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -210,7 +246,7 @@ ScriptedImporter:
     spriteName: stamp1
     isGroup: 0
     parentIndex: -1
-    spriteID: 583a699b0ba49644e81bc274f73eae05
+    spriteID: e2ed3a25851d1d049b84045ba1cba142
     layerID: -1958535320
     mosaicPosition: {x: 4, y: 79}
     flatten: 0
@@ -220,7 +256,7 @@ ScriptedImporter:
     spriteName: stamp2
     isGroup: 0
     parentIndex: -1
-    spriteID: 5529daf13f091c44497737ec49fc6f83
+    spriteID: 5ab5186da1725fc43bef2ce34dc2df98
     layerID: -392451379
     mosaicPosition: {x: 4, y: 154}
     flatten: 0
@@ -229,7 +265,7 @@ ScriptedImporter:
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638473662169670033
   spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 

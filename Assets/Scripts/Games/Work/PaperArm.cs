@@ -8,7 +8,7 @@ namespace IP1
     public class PaperArm : MonoBehaviour
     {
         private PaperStack m_paperStack;
-        private Stamp m_stamp;
+        private StampArm m_stampArm;
         
         [SerializeField] private Paper m_paperPrefab;
         [SerializeField] private Vector3 m_paperOffset;
@@ -36,7 +36,7 @@ namespace IP1
         private void Awake()
         {
             m_paperStack = FindObjectOfType<PaperStack>();
-            m_stamp = FindObjectOfType<Stamp>();
+            m_stampArm = FindObjectOfType<StampArm>();
             
             m_startingPosition = transform.position;
         }
@@ -46,7 +46,7 @@ namespace IP1
             OnPaperDropped += m_paperStack.AddPaper;
 
             m_paperStack.OnPaperAdded += OnPaperAdded;
-            m_stamp.OnPaperStamped += OnPaperStamped;
+            m_stampArm.OnPaperStamped += OnPaperStamped;
 
             SpawnPaper();
         }

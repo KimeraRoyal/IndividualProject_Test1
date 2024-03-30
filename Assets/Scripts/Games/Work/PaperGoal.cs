@@ -7,7 +7,7 @@ namespace IP1
     {
         private Microgame m_microgame;
 
-        private Stamp m_stamp;
+        private StampArm m_stampArm;
 
         [SerializeField] private int m_minTargetPapers = 10;
         [SerializeField] private int m_maxTargetPapers = 15;
@@ -20,14 +20,14 @@ namespace IP1
         {
             m_microgame = GetComponentInParent<Microgame>();
 
-            m_stamp = FindObjectOfType<Stamp>();
+            m_stampArm = FindObjectOfType<StampArm>();
         }
 
         private void Start()
         {
             m_targetPapers = Random.Range(m_minTargetPapers, m_maxTargetPapers);
             
-            m_stamp.OnPaperStamped += OnPaperStamped;
+            m_stampArm.OnPaperStamped += OnPaperStamped;
         }
 
         private void OnPaperStamped()

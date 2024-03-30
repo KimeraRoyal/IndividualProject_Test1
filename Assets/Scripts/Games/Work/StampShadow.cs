@@ -1,3 +1,4 @@
+using System;
 using IP1.Interaction;
 using IP1.Movement;
 using UnityEngine;
@@ -17,6 +18,8 @@ namespace IP1
         [SerializeField] private LayerMask m_boxcastLayerMask;
         [SerializeField] private Vector2 m_boxcastOrigin;
         [SerializeField] private Vector2 m_boxcastSize = Vector2.one;
+
+        public Action OnRise;
 
         private void Awake()
         {
@@ -44,6 +47,7 @@ namespace IP1
         private void Move()
         {
             m_mover.TargetPosition += m_paperStack.PaperOffset;
+            OnRise?.Invoke();
         }
 
         private void OnPaperAdded(Paper _paper)
