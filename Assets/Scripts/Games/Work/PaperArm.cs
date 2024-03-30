@@ -26,6 +26,7 @@ namespace IP1
         private Vector3 m_startingPosition;
 
         private Paper m_heldPaper;
+        private bool m_spawning;
 
         private Sequence m_sequence;
 
@@ -67,6 +68,7 @@ namespace IP1
 
         private IEnumerator WaitForNewPaper()
         {
+            yield return new WaitUntil(() => !m_spawning);
             yield return new WaitForSeconds(m_newPaperWaitTime);
             SpawnPaper();
         }
@@ -77,6 +79,7 @@ namespace IP1
             
             var localTransform = transform;
             
+            m_spawning = true;
             m_heldPaper = Instantiate(m_paperPrefab, localTransform.position + m_paperOffset, Quaternion.identity, localTransform);
             OnPaperCreated?.Invoke(m_heldPaper);
 
@@ -85,6 +88,12 @@ namespace IP1
             m_sequence.AppendCallback(DropPaper);
             m_sequence.AppendInterval(m_dropPaperWaitTime);
             m_sequence.Append(localTransform.DOMove(m_startingPosition, m_handOutTime).SetEase(m_handOutEase));
+            m_sequence.AppendCallback(FinishSpawning);
+        }
+
+        private void FinishSpawning()
+        {
+            m_spawning = false;
         }
 
         private void DropPaper()

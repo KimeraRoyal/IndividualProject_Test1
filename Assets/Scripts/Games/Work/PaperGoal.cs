@@ -19,6 +19,8 @@ namespace IP1
         private void Awake()
         {
             m_microgame = GetComponentInParent<Microgame>();
+
+            m_stamp = FindObjectOfType<Stamp>();
         }
 
         private void Start()
