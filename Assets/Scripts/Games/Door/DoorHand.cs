@@ -11,6 +11,8 @@ namespace IP1
         private MouseClick m_mouseClick;
         private MouseFollower m_mouseFollower;
 
+        private Transform m_originalParent;
+
         private bool m_doorOpened;
 
         private void Awake()
@@ -19,6 +21,8 @@ namespace IP1
             
             m_mouseClick = GetComponent<MouseClick>();
             m_mouseFollower = GetComponent<MouseFollower>();
+
+            m_originalParent = transform.parent;
         }
 
         private void Start()
@@ -40,7 +44,7 @@ namespace IP1
             m_mouseFollower.Enabled = true;
 
             var transformRef = transform;
-            transformRef.SetParent(null);
+            transformRef.SetParent(m_originalParent);
             transformRef.localEulerAngles = Vector3.zero;
         }
 

@@ -19,6 +19,8 @@ namespace IP1
 
         public void AddPaper(Paper _paper)
         {
+            _paper.transform.SetParent(transform);
+            
             m_papers.Add(_paper);
             OnPaperAdded?.Invoke(_paper);
         }

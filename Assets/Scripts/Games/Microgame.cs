@@ -7,13 +7,12 @@ namespace IP1
 {
     public class Microgame : MonoBehaviour
     {
-        [SerializeField] private string m_nextSceneName;
         [SerializeField] private float m_nextGameWaitTime = 1.0f;
 
         private bool m_cleared;
 
         public Action OnCleared;
-        public Action OnNextGame;
+        public Action OnNextGameRequested;
 
         private void Start()
         {
@@ -30,8 +29,7 @@ namespace IP1
         private IEnumerator WaitForNextGame()
         {
             if(m_nextGameWaitTime > 0.001f) { yield return new WaitForSeconds(m_nextGameWaitTime); }
-            OnNextGame?.Invoke();
-            SceneManager.LoadScene(m_nextSceneName);
+            OnNextGameRequested?.Invoke();
         }
     }
 }
