@@ -31,7 +31,7 @@ namespace IP1.Movement
 
             foreach (var mover in m_movers)
             {
-                mover.OnMoveTargetPosition += Clamp;
+                mover.OnMoveTarget += Clamp;
                 mover.OnMove += Clamp;
             }
             

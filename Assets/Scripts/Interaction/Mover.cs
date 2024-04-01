@@ -1,12 +1,11 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace IP1.Interaction
 {
     public class Mover : MonoBehaviour
     {
-        public Func<Vector3, Vector3> OnMoveTargetPosition;
+        public Func<Vector3, Vector3> OnMoveTarget;
         public Func<Vector3, Vector3> OnMove;
 
         [SerializeField] private bool m_enabled = true;
@@ -28,9 +27,9 @@ namespace IP1.Interaction
             set
             {
                 m_targetPosition = value;
-                if (OnMoveTargetPosition != null)
+                if (OnMoveTarget != null)
                 {
-                    m_targetPosition = OnMoveTargetPosition.Invoke(m_targetPosition);
+                    m_targetPosition = OnMoveTarget.Invoke(m_targetPosition);
                 }
             }
         }

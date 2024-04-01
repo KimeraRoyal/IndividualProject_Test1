@@ -23,6 +23,7 @@ namespace IP1
     public class Games : MonoBehaviour
     {
         [SerializeField] private GameState[] m_states;
+        [SerializeField] private string m_firstGame;
 
         [SerializeField] private float m_loadTime = 1.0f;
 
@@ -42,23 +43,25 @@ namespace IP1
 
         private void Start()
         {
-            LoadState(0);
+            LoadState(m_stateIndexReference[m_firstGame]);
         }
 
         private void LoadState(int _id)
         {
-            UnloadCurrent();
+            var time = m_currentState < 0 ? 0 : m_loadTime;
             
-            m_currentState = _id;
-            StartCoroutine(WaitAndLoad());
+            UnloadCurrent();
+            StartCoroutine(WaitAndLoad(time, _id));
         }
 
-        private IEnumerator WaitAndLoad()
+        private IEnumerator WaitAndLoad(float _waitTime, int _id)
         {
-            yield return new WaitForSeconds(m_loadTime);
+            if(_waitTime > 0.001f) { yield return new WaitForSeconds(m_loadTime); }
             
-            m_currentMicrogame = Instantiate(m_states[m_currentState].Microgame, transform);
+            m_currentMicrogame = Instantiate(m_states[_id].Microgame, transform);
             m_currentMicrogame.OnNextGameRequested += OnNextGameRequested;
+                
+            m_currentState = _id;
         }
 
         private void UnloadCurrent()

@@ -275,4 +275,5 @@ MonoBehaviour:
   - m_id: waiting_room
     m_microgame: {fileID: 1603438247638720837, guid: 13d8364e7f4aef44a9f62e1035143831, type: 3}
     m_nextGame: pillbox
+  m_firstGame: waiting_room
   m_loadTime: 0.5
