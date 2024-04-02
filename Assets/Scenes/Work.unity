@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stamp Game
       objectReference: {fileID: 0}
+    - target: {fileID: 1599345738695312848, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
+      propertyPath: m_ClearFlags
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2993628825123827758, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -178,6 +182,18 @@ PrefabInstance:
     - target: {fileID: 2993628825123827758, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033558538285400206, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
+      propertyPath: m_randomization
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033558538285400206, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
+      propertyPath: m_randomizationTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956486484178751567, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293775561
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

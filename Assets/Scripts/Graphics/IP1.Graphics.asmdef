@@ -2,7 +2,8 @@
     "name": "IP1.Graphics",
     "rootNamespace": "IP1",
     "references": [
-        "GUID:285a67977dc99a94b965cba71b6c70b6"
+        "GUID:285a67977dc99a94b965cba71b6c70b6",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

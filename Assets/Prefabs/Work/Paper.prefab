@@ -314,11 +314,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 794189850167169478, guid: 8511b5ccb9033194fa81f0af7371637a, type: 3}
       propertyPath: m_Size.x
-      value: 80.66181
+      value: 79.53734
       objectReference: {fileID: 0}
     - target: {fileID: 794189850167169478, guid: 8511b5ccb9033194fa81f0af7371637a, type: 3}
       propertyPath: m_Size.y
-      value: 80.15591
+      value: 102.46059
       objectReference: {fileID: 0}
     - target: {fileID: 4879319428463826498, guid: 8511b5ccb9033194fa81f0af7371637a, type: 3}
       propertyPath: m_RootOrder
