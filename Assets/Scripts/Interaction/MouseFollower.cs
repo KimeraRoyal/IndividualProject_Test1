@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 
 namespace IP1.Interaction
 {
     public class MouseFollower : Mover
     {
-        private Camera m_camera;
+        [SerializeField] private Camera m_camera;
         
         [SerializeField] private bool m_xFollow = true;
         [SerializeField] private bool m_yFollow = true;
@@ -15,7 +14,7 @@ namespace IP1.Interaction
 
         private void Awake()
         {
-            m_camera = FindObjectOfType<Camera>();
+            m_camera ??= FindObjectOfType<Camera>();
         }
 
         protected override void Update()

@@ -9,6 +9,8 @@ namespace IP1
 
         [SerializeField] private int m_pixelsPerInch = 100;
 
+        private Vector3 m_lastPosition;
+
         private void Awake()
         {
             m_movers = GetComponents<Mover>();
@@ -20,7 +22,6 @@ namespace IP1
 
             foreach (var mover in m_movers)
             {
-                mover.OnMoveTarget += Clamp;
                 mover.OnMove += Clamp;
             }
             
@@ -55,6 +56,8 @@ namespace IP1
         private void Clamp()
         {
             var position = transform.localPosition;
+            if((position - m_lastPosition).magnitude < 0.001f) { return; }
+            
             position = Clamp(position);
             transform.localPosition = position;
         }
