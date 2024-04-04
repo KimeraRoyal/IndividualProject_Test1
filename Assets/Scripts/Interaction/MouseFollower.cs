@@ -12,9 +12,18 @@ namespace IP1.Interaction
         [SerializeField] private Vector3 m_offset;
         [SerializeField] private Vector3 m_scale = Vector3.one;
 
-        private void Awake()
+        protected override void Awake()
         {
-            m_camera ??= FindObjectOfType<Camera>();
+            if(!m_camera) { m_camera = FindObjectOfType<Camera>(); }
+            
+            base.Awake();
+        }
+
+        protected override void Start()
+        {
+            CalculatePosition();
+            
+            base.Start();
         }
 
         protected override void Update()

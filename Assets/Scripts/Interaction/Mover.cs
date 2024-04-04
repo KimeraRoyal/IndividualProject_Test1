@@ -49,10 +49,15 @@ namespace IP1.Interaction
             }
         }
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             m_targetPosition = transform.localPosition;
+        }
+
+        protected virtual void Start()
+        {
             m_realPosition = m_targetPosition;
+            transform.localPosition = m_targetPosition;
         }
 
         protected virtual void Update()

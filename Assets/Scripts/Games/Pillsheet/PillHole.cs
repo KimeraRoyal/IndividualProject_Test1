@@ -22,6 +22,8 @@ namespace IP1
             }
         }
 
+        public Action OnPopped;
+
         private void Awake()
         {
             m_button = GetComponent<FaceButton>();
@@ -37,6 +39,7 @@ namespace IP1
         {
             if(Open) { return; }
             Open = _pressed;
+            OnPopped?.Invoke();
         }
     }
 }
