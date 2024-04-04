@@ -5,7 +5,7 @@ namespace IP1
 {
     public class PointerFinger : MonoBehaviour
     {
-        private Camera m_camera;
+        [SerializeField] private Camera m_camera;
         
         private Mover m_mover;
 
@@ -20,7 +20,7 @@ namespace IP1
 
         private void Awake()
         {
-            m_camera = FindObjectOfType<Camera>();
+            m_camera ??= FindObjectOfType<Camera>();
             
             m_mover = GetComponent<Mover>();
             m_animationSets = GetComponentsInChildren<SpriteAnimationSet>();
@@ -43,7 +43,10 @@ namespace IP1
                 animationSet.CurrentAnimationIndex = 1;
             }
             
-            var direction = (m_interactionPoint.position - m_camera.transform.position).normalized;
+            var direction = m_camera.transform.forward;
+            if(!m_camera.orthographic) { direction = (m_interactionPoint.position - m_camera.transform.position).normalized; }
+            
+            Debug.DrawRay(m_interactionPoint.position, direction, Color.red, 1.0f);
             if (!Physics.SphereCast(m_interactionPoint.position, m_interactionCastRadius, direction, out var rayHit)) { return; }
             
             m_pressedButton = rayHit.collider.GetComponentInParent<FaceButton>();

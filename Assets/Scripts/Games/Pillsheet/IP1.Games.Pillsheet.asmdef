@@ -1,0 +1,17 @@
+{
+    "name": "IP1.Games.Pillsheet",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b0c1f539841d8b44aadca7dd378b44f8",
+        "GUID:285a67977dc99a94b965cba71b6c70b6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

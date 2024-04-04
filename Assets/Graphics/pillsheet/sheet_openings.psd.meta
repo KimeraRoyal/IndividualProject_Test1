@@ -1,0 +1,1050 @@
+fileFormatVersion: 2
+guid: 4f4221f3adfdc924abb59a4c1c85636f
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 32
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: pill27
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 110
+      width: 18
+      height: 19
+    spriteID: f08a8c31fc3a2c141be2ef40245c40ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 110}
+    spritePosition: {x: 103, y: 6}
+  - name: pill26
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 185
+      width: 16
+      height: 18
+    spriteID: 879f1b21e7e00ad4bb7622e155d31f13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 185}
+    spritePosition: {x: 87, y: 6}
+  - name: pill25
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 4
+      width: 17
+      height: 18
+    spriteID: 19e502c3484541441aa1748800ff69ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 4}
+    spritePosition: {x: 70, y: 6}
+  - name: pill24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 159
+      width: 16
+      height: 18
+    spriteID: c5b5adeb5a9f01c47a66e26d433c4fff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 159}
+    spritePosition: {x: 54, y: 6}
+  - name: pill23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 211
+      width: 16
+      height: 17
+    spriteID: 1a1f95a3a0897c249b4e2762b56787be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 211}
+    spritePosition: {x: 38, y: 6}
+  - name: pill22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 202
+      width: 15
+      height: 16
+    spriteID: ff28e7f04e503124c8aa892fde905cc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 202}
+    spritePosition: {x: 23, y: 7}
+  - name: pill21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 82
+      width: 17
+      height: 17
+    spriteID: fe9e7d4d4b383ab49871a26cb0e9da12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 82}
+    spritePosition: {x: 6, y: 7}
+  - name: pill20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 178
+      width: 15
+      height: 16
+    spriteID: c0a956ba01aaeff4e8a8b6fa13fdceca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 178}
+    spritePosition: {x: 106, y: 25}
+  - name: pill19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 19
+      height: 17
+    spriteID: c0bbef459e502ba439ae419ee435d8be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+    spritePosition: {x: 87, y: 24}
+  - name: pill18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 127
+      width: 15
+      height: 17
+    spriteID: 8d050a62e6e348a418af6ee6b6f18f96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 127}
+    spritePosition: {x: 72, y: 24}
+  - name: pill17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 137
+      width: 19
+      height: 17
+    spriteID: 2dcbdd1d3ec23c147b1889d6dbd5dc38
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 137}
+    spritePosition: {x: 53, y: 24}
+  - name: pill16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 152
+      width: 14
+      height: 18
+    spriteID: 25f0d35afcb3cfe48abc2b0eb8293672
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 152}
+    spritePosition: {x: 40, y: 23}
+  - name: pill15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 84
+      width: 19
+      height: 18
+    spriteID: dea27e3e5b711584caed865821cc57d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 84}
+    spritePosition: {x: 21, y: 23}
+  - name: pill14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 102
+      width: 15
+      height: 17
+    spriteID: e124f266c8ae0624b972db5d50f60b1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 102}
+    spritePosition: {x: 6, y: 24}
+  - name: pill13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 57
+      width: 18
+      height: 19
+    spriteID: a6073c1e81d18d64081e0595c041b3d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 57}
+    spritePosition: {x: 104, y: 41}
+  - name: pill12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 20
+      height: 19
+    spriteID: 6d114d61d4684534faddf06d94d3bfda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 84, y: 41}
+  - name: pill11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 30
+      width: 16
+      height: 19
+    spriteID: 293933019e9b97d4bbdc51fdfcf0a2f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 30}
+    spritePosition: {x: 71, y: 41}
+  - name: pill10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 133
+      width: 16
+      height: 18
+    spriteID: 0f69cc948145f6d4896e18b9d2099bd6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 133}
+    spritePosition: {x: 55, y: 41}
+  - name: pill9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 107
+      width: 16
+      height: 18
+    spriteID: c27db490e687270438f4cf6072785d28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 107}
+    spritePosition: {x: 39, y: 41}
+  - name: pill8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 31
+      width: 19
+      height: 18
+    spriteID: 4bf7d877e42490c40bbdba98ee6fb300
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 31}
+    spritePosition: {x: 20, y: 41}
+  - name: pill7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 28
+      width: 15
+      height: 18
+    spriteID: dca83e921cc25c9459efe2238458263c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 28}
+    spritePosition: {x: 6, y: 41}
+  - name: pill6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 211
+      width: 17
+      height: 18
+    spriteID: 8bcf12dfaf647724e902094d6c8091fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 211}
+    spritePosition: {x: 105, y: 58}
+  - name: pill5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 4
+      width: 18
+      height: 16
+    spriteID: 90fda31b7e697074690a52b2420be228
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 4}
+    spritePosition: {x: 87, y: 60}
+  - name: pill4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 187
+      width: 20
+      height: 16
+    spriteID: 053cb8cd006ed4b45ba8176b39aa7471
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 187}
+    spritePosition: {x: 71, y: 60}
+  - name: pill3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 57
+      width: 17
+      height: 17
+    spriteID: 2bcd3f7d3f181a947b500a4d557090a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 57}
+    spritePosition: {x: 54, y: 59}
+  - name: pill2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 78
+      width: 16
+      height: 16
+    spriteID: 09533df4f16047545b73bc12819e0868
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 78}
+    spritePosition: {x: 38, y: 59}
+  - name: pill1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 57
+      y: 54
+      width: 16
+      height: 16
+    spriteID: efe8f777fc671ae4095c7aa0e6c48f08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 57, y: 54}
+    spritePosition: {x: 22, y: 60}
+  - name: pill0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 236
+      width: 16
+      height: 16
+    spriteID: f522f56a5b2020e41b9ecd7f9098c16e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 32, y: 236}
+    spritePosition: {x: 6, y: 60}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: pill0
+    spriteName: pill0
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f522f56a5b2020e41b9ecd7f9098c16e
+    layerID: -1859736919
+    mosaicPosition: {x: 32, y: 236}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill1
+    spriteName: pill1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: efe8f777fc671ae4095c7aa0e6c48f08
+    layerID: -1859736920
+    mosaicPosition: {x: 57, y: 54}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill2
+    spriteName: pill2
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 09533df4f16047545b73bc12819e0868
+    layerID: -1859736917
+    mosaicPosition: {x: 57, y: 78}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill3
+    spriteName: pill3
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2bcd3f7d3f181a947b500a4d557090a2
+    layerID: -1859736918
+    mosaicPosition: {x: 32, y: 57}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill4
+    spriteName: pill4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 053cb8cd006ed4b45ba8176b39aa7471
+    layerID: -1859736915
+    mosaicPosition: {x: 4, y: 187}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill5
+    spriteName: pill5
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 90fda31b7e697074690a52b2420be228
+    layerID: -1859736916
+    mosaicPosition: {x: 57, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill6
+    spriteName: pill6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8bcf12dfaf647724e902094d6c8091fe
+    layerID: -1859736913
+    mosaicPosition: {x: 4, y: 211}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill7
+    spriteName: pill7
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dca83e921cc25c9459efe2238458263c
+    layerID: -1859736914
+    mosaicPosition: {x: 57, y: 28}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill8
+    spriteName: pill8
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4bf7d877e42490c40bbdba98ee6fb300
+    layerID: -1859736927
+    mosaicPosition: {x: 4, y: 31}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill9
+    spriteName: pill9
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c27db490e687270438f4cf6072785d28
+    layerID: -1859736928
+    mosaicPosition: {x: 32, y: 107}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill10
+    spriteName: pill10
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0f69cc948145f6d4896e18b9d2099bd6
+    layerID: 1870981208
+    mosaicPosition: {x: 32, y: 133}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill11
+    spriteName: pill11
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 293933019e9b97d4bbdc51fdfcf0a2f4
+    layerID: -857902147
+    mosaicPosition: {x: 32, y: 30}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill12
+    spriteName: pill12
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6d114d61d4684534faddf06d94d3bfda
+    layerID: 708181794
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill13
+    spriteName: pill13
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a6073c1e81d18d64081e0595c041b3d0
+    layerID: -2020701561
+    mosaicPosition: {x: 4, y: 57}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill14
+    spriteName: pill14
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e124f266c8ae0624b972db5d50f60b1f
+    layerID: -454617620
+    mosaicPosition: {x: 57, y: 102}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill15
+    spriteName: pill15
+    isGroup: 0
+    parentIndex: -1
+    spriteID: dea27e3e5b711584caed865821cc57d1
+    layerID: 1111466321
+    mosaicPosition: {x: 4, y: 84}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill16
+    spriteName: pill16
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 25f0d35afcb3cfe48abc2b0eb8293672
+    layerID: -1617417034
+    mosaicPosition: {x: 57, y: 152}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill17
+    spriteName: pill17
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2dcbdd1d3ec23c147b1889d6dbd5dc38
+    layerID: -51333093
+    mosaicPosition: {x: 4, y: 137}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill18
+    spriteName: pill18
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8d050a62e6e348a418af6ee6b6f18f96
+    layerID: 1514750848
+    mosaicPosition: {x: 57, y: 127}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill19
+    spriteName: pill19
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c0bbef459e502ba439ae419ee435d8be
+    layerID: -1214132507
+    mosaicPosition: {x: 4, y: 162}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill20
+    spriteName: pill20
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c0a956ba01aaeff4e8a8b6fa13fdceca
+    layerID: 1870981211
+    mosaicPosition: {x: 57, y: 178}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill21
+    spriteName: pill21
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fe9e7d4d4b383ab49871a26cb0e9da12
+    layerID: -857902144
+    mosaicPosition: {x: 32, y: 82}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill22
+    spriteName: pill22
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ff28e7f04e503124c8aa892fde905cc3
+    layerID: 708181797
+    mosaicPosition: {x: 57, y: 202}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill23
+    spriteName: pill23
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1a1f95a3a0897c249b4e2762b56787be
+    layerID: -2020701558
+    mosaicPosition: {x: 32, y: 211}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill24
+    spriteName: pill24
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c5b5adeb5a9f01c47a66e26d433c4fff
+    layerID: -454617617
+    mosaicPosition: {x: 32, y: 159}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill25
+    spriteName: pill25
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 19e502c3484541441aa1748800ff69ae
+    layerID: 1111466324
+    mosaicPosition: {x: 32, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill26
+    spriteName: pill26
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 879f1b21e7e00ad4bb7622e155d31f13
+    layerID: -1617417031
+    mosaicPosition: {x: 32, y: 185}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pill27
+    spriteName: pill27
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f08a8c31fc3a2c141be2ef40245c40ab
+    layerID: 0
+    mosaicPosition: {x: 4, y: 110}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638478491063503625
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
