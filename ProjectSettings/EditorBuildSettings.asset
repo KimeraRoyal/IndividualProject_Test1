@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Door Handle.unity
     guid: fc8a641634fec8c468e4e2c6d4fb7be1
   - enabled: 1
-    path: Assets/Scenes/Breakfast.unity
+    path: Assets/Scenes/Microwave.unity
     guid: 55ef240c89928674a91086b499c47e85
   - enabled: 1
     path: Assets/Scenes/Work.unity

@@ -18,6 +18,8 @@ namespace IP1
         [SerializeField] private int m_minTimerValue = 60;
         [SerializeField] private int m_maxTimerValue = 120;
 
+        [SerializeField] private Transform m_meal;
+
         [SerializeField] private FaceButton[] m_incidentalButtons;
         [SerializeField] private FaceButton m_startButton;
 
@@ -36,6 +38,8 @@ namespace IP1
             m_digits = GetComponentInChildren<Digits>();
             m_rotator = GetComponentInChildren<RotateInPlace>();
             m_colourChanger = GetComponentInChildren<ColourChanger>();
+
+            Instantiate(m_meal, m_rotator.transform);
         }
 
         private void Start()

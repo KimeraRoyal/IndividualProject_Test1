@@ -516,8 +516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a2b1f012f979a40a7eaffdd8f213ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_minTargetPapers: 10
-  m_maxTargetPapers: 15
+  m_minTargetPapers: 8
+  m_maxTargetPapers: 10
 --- !u!1 &2533758448480880135
 GameObject:
   m_ObjectHideFlags: 0

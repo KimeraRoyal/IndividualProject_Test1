@@ -55,6 +55,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7076621646953487938}
     m_Modifications:
+    - target: {fileID: 3745180059277494534, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221475394018884115, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221475394018884115, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221475394018884115, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221475394018884115, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651805792076360984, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651805792076360984, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.10980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651805792076360984, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.13333334
+      objectReference: {fileID: 0}
     - target: {fileID: 6185360204563510303, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
       propertyPath: m_Name
       value: View
@@ -106,13 +138,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8305393899273813505, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2377236868199065979}
   m_SourcePrefab: {fileID: 100100000, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
 --- !u!4 &4235878929204502468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8428121962540152936, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
   m_PrefabInstance: {fileID: 5638059459098208172}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4430634436144208301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8305393899273813505, guid: e15c4e80f37c4b74592e5e2d2462ec9b, type: 3}
+  m_PrefabInstance: {fileID: 5638059459098208172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2377236868199065979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4430634436144208301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccbd23b92986abc45b15d64a62250438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_heightToFit: 240
 --- !u!1001 &8541827905836820098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 404007110814856564, guid: 65755e84791211049a368272a2fa86a2, type: 3}
       propertyPath: m_Name
       value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 873380733635732376, guid: 65755e84791211049a368272a2fa86a2, type: 3}
+      propertyPath: m_height
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 1058143503763698542, guid: 65755e84791211049a368272a2fa86a2, type: 3}
       propertyPath: m_RootOrder
@@ -168,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 1058143503763698542, guid: 65755e84791211049a368272a2fa86a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625348066161257411, guid: 65755e84791211049a368272a2fa86a2, type: 3}
+      propertyPath: orthographic size
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
