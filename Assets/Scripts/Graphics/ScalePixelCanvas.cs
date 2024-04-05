@@ -1,10 +1,9 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace IP1
 {
-    [RequireComponent(typeof(CanvasScaler))]
+    [RequireComponent(typeof(CanvasScaler))] [ExecuteInEditMode]
     public class ScalePixelCanvas : MonoBehaviour
     {
         private CanvasScaler m_scaler;
