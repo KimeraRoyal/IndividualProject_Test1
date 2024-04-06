@@ -140,6 +140,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7451485171339530696, guid: a48866d629773af45a2532c713f09382, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7861333237064110053}
+    - targetCorrespondingSourceObject: {fileID: -7451485171339530696, guid: a48866d629773af45a2532c713f09382, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3205289161784259843}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: a48866d629773af45a2532c713f09382, type: 3}
 --- !u!4 &389888846847675099 stripped
 Transform:
@@ -207,3 +210,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &3205289161784259843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779683947454700861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edaa43d958edc8a428d3bdf8cbb3ec9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_colors:
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
+  m_colorChangeTime: 0.5
+  m_colorChangeEase: 1
+  m_changeToOnStart: 1

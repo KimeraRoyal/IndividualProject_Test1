@@ -194,6 +194,7 @@ MonoBehaviour:
   - {fileID: -142370170732736981, guid: a7a234abca177ac4e9ca120733f5838e, type: 3}
   - {fileID: -877217023786187701, guid: a7a234abca177ac4e9ca120733f5838e, type: 3}
   - {fileID: 6838905658629158146, guid: a7a234abca177ac4e9ca120733f5838e, type: 3}
+  m_animate: 0
   m_frameTime: 0.4
   m_frameTimeVariance: 0.1
   m_startOnRandomFrame: 0

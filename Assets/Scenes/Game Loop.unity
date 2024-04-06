@@ -265,6 +265,9 @@ MonoBehaviour:
     m_nextGame: pillsheet
   - m_id: pillsheet
     m_microgame: {fileID: 5479266023979035344, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+    m_nextGame: pillswallow
+  - m_id: pillswallow
+    m_microgame: {fileID: 832594688641034167, guid: b201c8930d9e2bc42ae658596ae61fb3, type: 3}
     m_nextGame: door
   - m_id: door
     m_microgame: {fileID: 3649456300252217975, guid: dc24f4bf49aec1147935285964c44311, type: 3}
