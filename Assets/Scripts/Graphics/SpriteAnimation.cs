@@ -11,6 +11,7 @@ namespace IP1
         
         [SerializeField] private Sprite[] m_frames;
 
+        [SerializeField] private bool m_animate = true;
         [SerializeField] private float m_frameTime = 1.0f;
         [SerializeField] private float m_frameTimeVariance = 0.0f;
 
@@ -49,6 +50,8 @@ namespace IP1
 
         private void Update()
         {
+            if(!m_animate) { return; }
+            
             m_timer += Time.deltaTime;
             if(m_timer < m_uniqueFrameTime) { return; }
             m_timer -= m_uniqueFrameTime;
