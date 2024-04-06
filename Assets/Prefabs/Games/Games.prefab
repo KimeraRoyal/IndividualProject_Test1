@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7812463331744224978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3359016010950577436}
+  - component: {fileID: 8241027362274592518}
+  - component: {fileID: 6050777276910281360}
+  m_Layer: 0
+  m_Name: Games
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3359016010950577436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812463331744224978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8241027362274592518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812463331744224978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5af3377704220746a9d62351b1e0379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_states:
+  - m_id: pillbox
+    m_microgame: {fileID: 5379759832787520318, guid: be8ec81b60e6938489c16481ca7d724f, type: 3}
+    m_nextGame: pillsheet
+  - m_id: pillsheet
+    m_microgame: {fileID: 5479266023979035344, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+    m_nextGame: pillswallow
+  - m_id: pillswallow
+    m_microgame: {fileID: 832594688641034167, guid: b201c8930d9e2bc42ae658596ae61fb3, type: 3}
+    m_nextGame: door
+  - m_id: door
+    m_microgame: {fileID: 3649456300252217975, guid: dc24f4bf49aec1147935285964c44311, type: 3}
+    m_nextGame: breakfast
+  - m_id: breakfast
+    m_microgame: {fileID: 7192635828808388355, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
+    m_nextGame: work
+  - m_id: work
+    m_microgame: {fileID: 328701616836248466, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
+    m_nextGame: lunch
+  - m_id: lunch
+    m_microgame: {fileID: 7079845386353276851, guid: 0dca41dd4b8c5ea478e8ce3d880617d5, type: 3}
+    m_nextGame: pillbox
+  - m_id: waiting_room
+    m_microgame: {fileID: 1603438247638720837, guid: 13d8364e7f4aef44a9f62e1035143831, type: 3}
+    m_nextGame: pillbox
+  m_firstGame: pillbox
+  m_loadTime: 0.5
+--- !u!114 &6050777276910281360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812463331744224978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7136904293f454db8880c75b3e5d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
