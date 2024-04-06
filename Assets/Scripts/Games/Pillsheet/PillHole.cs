@@ -39,7 +39,7 @@ namespace IP1
         {
             if(Open) { return; }
             Open = _pressed;
-            OnPopped?.Invoke();
+            if(Open) { OnPopped?.Invoke(); }
         }
     }
 }

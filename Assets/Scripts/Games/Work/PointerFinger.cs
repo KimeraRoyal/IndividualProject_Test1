@@ -5,6 +5,8 @@ namespace IP1
 {
     public class PointerFinger : MonoBehaviour
     {
+        private Microgame m_microgame;
+        
         [SerializeField] private Camera m_camera;
         
         private Mover m_mover;
@@ -20,6 +22,8 @@ namespace IP1
 
         private void Awake()
         {
+            m_microgame = GetComponentInParent<Microgame>();
+            
             if(!m_camera) { m_camera = FindObjectOfType<Camera>(); }
             
             m_mover = GetComponent<Mover>();
@@ -30,6 +34,8 @@ namespace IP1
         {
             var mouseDown = Input.GetMouseButton(0);
             if(m_fingerDown == mouseDown) { return; }
+            
+            if (m_microgame.Cleared) { mouseDown = false; }
 
             m_fingerDown = mouseDown;
             if(m_fingerDown) { Press(); }
