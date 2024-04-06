@@ -10,22 +10,35 @@ namespace IP1
         [SerializeField] private float m_alternateTime = 1.0f;
         [SerializeField] private bool m_offset;
 
+        [SerializeField] private bool m_alternateOn = true;
+
         private float m_timer;
 
         private Vector3[] m_positions;
         private int m_currentPositionIndex;
 
+        private Vector3 m_startingPosition;
+
+        public bool AlternateOn
+        {
+            get => m_alternateOn;
+            set => m_alternateOn = value;
+        }
+        
+        public Vector3 StartingPosition
+        {
+            get => m_startingPosition;
+            set => m_startingPosition = value;
+        }
+
         protected override void Awake()
         {
             m_positions = new[] { m_aPosition, m_bPosition };
-            if(!m_offset) { return; }
+            m_startingPosition = transform.localPosition;
 
-            for (var i = 0; i < m_positions.Length; i++)
-            {
-                m_positions[i] += transform.localPosition;
-            }
-            
-            TargetPosition = m_positions[0];
+            var newTargetPosition = m_positions[m_currentPositionIndex];
+            if (m_offset) { newTargetPosition += m_startingPosition; }
+            TargetPosition = newTargetPosition;
         }
 
         protected override void Update()
@@ -43,6 +56,8 @@ namespace IP1
 
         private void RunTimer()
         {
+            if(!m_alternateOn) { return; }
+            
             m_timer += Time.deltaTime;
             if(m_timer < m_alternateTime) { return; }
             m_timer -= m_alternateTime;
@@ -53,7 +68,10 @@ namespace IP1
         private void SwapTarget()
         {
             m_currentPositionIndex = 1 - m_currentPositionIndex;
-            TargetPosition = m_positions[m_currentPositionIndex];
+            
+            var newTargetPosition = m_positions[m_currentPositionIndex];
+            if (m_offset) { newTargetPosition += m_startingPosition; }
+            TargetPosition = newTargetPosition;
         }
     }
 }

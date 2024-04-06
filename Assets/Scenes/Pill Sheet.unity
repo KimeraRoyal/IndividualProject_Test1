@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &988974467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5743381438195014043, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+  m_PrefabInstance: {fileID: 8314283296991244705}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d8c12260c6b240840fdf1d8dd0fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1505659471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4102846445177807631, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+  m_PrefabInstance: {fileID: 8314283296991244705}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1d8c12260c6b240840fdf1d8dd0fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8314283296991244705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,6 +160,26 @@ PrefabInstance:
     - target: {fileID: 3145263610875350913, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
       propertyPath: m_Name
       value: Pillsheet Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453190651620831616, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_leftArm
+      value: 
+      objectReference: {fileID: 1505659471}
+    - target: {fileID: 5453190651620831616, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_rightArm
+      value: 
+      objectReference: {fileID: 988974467}
+    - target: {fileID: 5453190651620831616, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_clearedArmOffset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453190651620831616, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_fallingSheetPrefab
+      value: 
+      objectReference: {fileID: 4161161839376281185, guid: fa9455d7caf43ac47bf032827aae7308, type: 3}
+    - target: {fileID: 5453190651620831616, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_clearedArmMovementDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7076621646953487938, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
       propertyPath: m_RootOrder

@@ -11,6 +11,8 @@ namespace IP1
 
         private bool m_cleared;
 
+        public bool Cleared => m_cleared;
+
         public Action OnCleared;
         public Action OnNextGameRequested;
 
