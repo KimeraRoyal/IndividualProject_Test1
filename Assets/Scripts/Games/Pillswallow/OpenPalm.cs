@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 using IP1.Interaction;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace IP1
 {
@@ -17,6 +20,8 @@ namespace IP1
 
         private SpriteAnimationSet[] m_animationSet;
 
+        [SerializeField] private Camera m_camera;
+
         [SerializeField] private Transform m_pillPrefab;
         [SerializeField] private Transform m_pillSpawnPoint;
         [SerializeField] private Vector3 m_pillSpawnMinOffset, m_pillSpawnMaxOffset;
@@ -31,6 +36,10 @@ namespace IP1
         [SerializeField] private float m_moveOutSpeed = 1.0f;
 
         [SerializeField] private float m_rotateArmSpeed = 1.0f;
+
+        private List<Transform> m_pills;
+
+        public Action OnSwallow;
         
         private void Awake()
         {
@@ -42,6 +51,8 @@ namespace IP1
             m_mouseMovement = GetComponent<MouseMovement>();
 
             m_animationSet = GetComponentsInChildren<SpriteAnimationSet>();
+
+            m_pills = new List<Transform>();
         }
 
         private void Start()
@@ -79,7 +90,7 @@ namespace IP1
                 {
                     position[axis] = Random.Range(m_pillSpawnMinOffset[axis], m_pillSpawnMaxOffset[axis]);
                 }
-                Instantiate(m_pillPrefab, m_pillSpawnPoint.position + position, Quaternion.identity, m_pillSpawnPoint);
+                m_pills.Add(Instantiate(m_pillPrefab, m_pillSpawnPoint.position + position, Quaternion.identity, m_pillSpawnPoint));
             }
         }
 
@@ -90,10 +101,17 @@ namespace IP1
             SetHandAnimation(1);
             m_colliders.SetActive(false);
 
-            var sequence = DOTween.Sequence();
-            sequence.AppendInterval(m_dropSpriteHoldTime);
-            sequence.AppendCallback(() => { SetHandAnimation(0); });
+            foreach (var pill in m_pills)
+            {
+                pill.SetParent(m_microgame.transform);
+            }
+
+            var dropSequence = DOTween.Sequence();
+            dropSequence.AppendInterval(m_dropSpriteHoldTime);
+            dropSequence.AppendCallback(() => { SetHandAnimation(0); });
             
+            OnSwallow?.Invoke();
+
             m_microgame.Clear();
         }
 
