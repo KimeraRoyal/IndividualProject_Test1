@@ -84,3 +84,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7136904293f454db8880c75b3e5d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_prescriptionAmount: 3
+  m_pillsPopped: 00000000000000000000000000000000000000000000000000000000
+  m_sheetsRemaining: 3

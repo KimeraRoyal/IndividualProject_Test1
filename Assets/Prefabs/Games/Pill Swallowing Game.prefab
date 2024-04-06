@@ -284,6 +284,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 1506680288594915935, guid: 509670322a2ed064b8465a2ee2475179, type: 3}
+      propertyPath: m_moveInSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506680288594915935, guid: 509670322a2ed064b8465a2ee2475179, type: 3}
+      propertyPath: m_moveOutSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1898610948532069690, guid: 509670322a2ed064b8465a2ee2475179, type: 3}
       propertyPath: m_RootOrder
       value: -1

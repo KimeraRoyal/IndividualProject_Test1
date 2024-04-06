@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SheetHoles : MonoBehaviour
 {
+    private StateSaver m_state;
     private Microgame m_microgame;
     
     private PillHole[] m_holes;
@@ -29,6 +30,7 @@ public class SheetHoles : MonoBehaviour
 
     private void Awake()
     {
+        m_state = GetComponentInParent<StateSaver>();
         m_microgame = GetComponentInParent<Microgame>();
         
         m_holes = GetComponentsInChildren<PillHole>();
@@ -48,6 +50,8 @@ public class SheetHoles : MonoBehaviour
         Instantiate(m_pillPrefab, m_holes[_index].transform.position, Quaternion.identity, transform);
         m_pillsPopped++;
         
+        if(m_state) { m_state.PopPill(_index); }
+        
         if(m_pillsPopped >= m_pillsToClear) { m_microgame.Clear(); }
         
         CheckSheetEmpty();
@@ -55,7 +59,7 @@ public class SheetHoles : MonoBehaviour
 
     private void CheckSheetEmpty()
     {
-        if (m_holes.Any(hole => !hole.Open)) { return; }
+        if (m_holes.Any(_hole => !_hole.Open)) { return; }
         ReplaceSheet();
     }
 
@@ -63,7 +67,10 @@ public class SheetHoles : MonoBehaviour
     {
         Instantiate(m_fallingSheetPrefab, transform.position, transform.rotation, m_microgame.transform);
 
-        if (m_microgame.Cleared)
+        var replacedSheet = true;
+        if(m_state) { replacedSheet = m_state.TakeNewSheet(); }
+
+        if (m_microgame.Cleared || !replacedSheet)
         {
             m_leftArm.AlternateOn = false;
             m_rightArm.AlternateOn = false;
