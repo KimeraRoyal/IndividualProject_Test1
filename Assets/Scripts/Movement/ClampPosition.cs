@@ -1,4 +1,3 @@
-using System;
 using IP1.Interaction;
 using UnityEngine;
 
@@ -7,22 +6,25 @@ namespace IP1.Movement
     public class ClampPosition : MonoBehaviour
     {
         private Mover[] m_movers;
-        private Rigidbody2D m_rigidbody;
+        private Rigidbody2D m_rigidbody2D;
+        private Rigidbody m_rigidbody;
 
         [SerializeField] private bool m_xClampToBounds;
         [SerializeField] private bool m_yClampToBounds;
+        [SerializeField] private bool m_zClampToBounds;
         
-        [SerializeField] private Vector2 m_minBounds, m_maxBounds;
+        [SerializeField] private Vector3 m_minBounds, m_maxBounds;
 
         [SerializeField] private bool m_useLocalPosition;
 
-        public Vector2 MinBounds { get => m_minBounds; set => m_minBounds = value; }
-        public Vector2 MaxBounds { get => m_maxBounds; set => m_maxBounds = value; }
+        public Vector3 MinBounds { get => m_minBounds; set => m_minBounds = value; }
+        public Vector3 MaxBounds { get => m_maxBounds; set => m_maxBounds = value; }
         
         private void Awake()
         {
             m_movers = GetComponents<Mover>();
-            m_rigidbody = GetComponent<Rigidbody2D>();
+            m_rigidbody2D = GetComponent<Rigidbody2D>();
+            m_rigidbody = GetComponent<Rigidbody>();
         }
 
         private void Start()
@@ -47,6 +49,7 @@ namespace IP1.Movement
         {
             if (m_xClampToBounds) { _position = ClampAxis(0, _position); }
             if (m_yClampToBounds) { _position = ClampAxis(1, _position); }
+            if (m_zClampToBounds) { _position = ClampAxis(2, _position); }
 
             return _position;
         }
@@ -84,12 +87,20 @@ namespace IP1.Movement
                 clamped = true;
                 rebound = -1;
             }
-                
-            if (m_rigidbody && clamped)
+
+            if (!clamped) { return _position; }
+            
+            if (m_rigidbody)
             {
                 var velocity = m_rigidbody.velocity;
                 velocity[_axis] = rebound;
                 m_rigidbody.velocity = velocity;
+            }
+            if (m_rigidbody2D)
+            {
+                var velocity = m_rigidbody2D.velocity;
+                velocity[_axis] = rebound;
+                m_rigidbody2D.velocity = velocity;
             }
 
             return _position;

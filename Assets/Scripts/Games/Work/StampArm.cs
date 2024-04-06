@@ -98,7 +98,7 @@ namespace IP1
 
         private void OnPaperAdded(Paper _paper)
         {
-            var offset = Vector2.up * m_paperStack.PaperOffset.y;
+            var offset = Vector3.up * m_paperStack.PaperOffset.y;
             m_clampPosition.MinBounds += offset;
             m_clampPosition.MaxBounds += offset;
         }

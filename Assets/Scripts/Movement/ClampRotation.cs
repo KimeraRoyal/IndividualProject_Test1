@@ -8,13 +8,14 @@ namespace IP1
 
         [SerializeField] private bool m_xClampToBounds;
         [SerializeField] private bool m_yClampToBounds;
+        [SerializeField] private bool m_zClampToBounds;
         
-        [SerializeField] private Vector2 m_minRotation, m_maxRotation;
+        [SerializeField] private Vector3 m_minRotation, m_maxRotation;
 
         [SerializeField] private bool m_useLocalRotation;
 
-        public Vector2 MinRotation { get => m_minRotation; set => m_minRotation = value; }
-        public Vector2 MaxRotation { get => m_maxRotation; set => m_maxRotation = value; }
+        public Vector3 MinRotation { get => m_minRotation; set => m_minRotation = value; }
+        public Vector3 MaxRotation { get => m_maxRotation; set => m_maxRotation = value; }
         
         private void Awake()
         {
@@ -43,6 +44,7 @@ namespace IP1
         {
             if (m_xClampToBounds) { _rotation = ClampAxis(0, _rotation); }
             if (m_yClampToBounds) { _rotation = ClampAxis(1, _rotation); }
+            if (m_zClampToBounds) { _rotation = ClampAxis(2, _rotation); }
 
             return _rotation;
         }
