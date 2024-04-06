@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5689770451036265961}
   - component: {fileID: 9097397602487344544}
   - component: {fileID: 6591596655335480203}
+  - component: {fileID: 4539349133717965194}
   m_Layer: 0
   m_Name: Right Arm
   m_TagString: Untagged
@@ -66,6 +67,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pixelsPerInch: 32
   m_static: 0
+--- !u!58 &4539349133717965194
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585916303128721191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.75, y: 3.55}
+  serializedVersion: 2
+  m_Radius: 0.06
 --- !u!1001 &6507704959046743739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -309576825456273297, guid: b5fae291231fd6b40a2e311ab552045e, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -309576825456273297, guid: b5fae291231fd6b40a2e311ab552045e, type: 3}
       propertyPath: m_SortingLayerID

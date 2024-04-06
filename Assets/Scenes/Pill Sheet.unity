@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1084212931973647793, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_Offset.x
+      value: -3.67
+      objectReference: {fileID: 0}
     - target: {fileID: 3145263610875350913, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
       propertyPath: m_Name
       value: Pillsheet Game
@@ -177,6 +181,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7076621646953487938, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138708284536020544, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
