@@ -1,8 +1,8 @@
 {
-    "name": "IP1.Games",
+    "name": "IP1.Splash",
     "rootNamespace": "IP1",
     "references": [
-        "GUID:06c2ba05ab4b7f84c9d6d4e60febf8bc"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
