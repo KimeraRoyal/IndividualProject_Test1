@@ -447,6 +447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Games
       objectReference: {fileID: 0}
+    - target: {fileID: 8241027362274592518, guid: 45f3712c67be75d4fbbd5c7e38c1ef20, type: 3}
+      propertyPath: m_firstGame
+      value: breakfast
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

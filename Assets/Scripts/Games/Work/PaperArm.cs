@@ -92,7 +92,15 @@ namespace IP1
 
         private void SpawnPaper()
         {
-            if (m_sequence is { active: true }) { m_sequence.Kill(); }
+            if (m_sequence is { active: true })
+            {
+                m_sequence.Kill();
+                if(m_heldPaper)
+                {
+                    m_heldPaper.transform.position = m_paperOffset + m_paperStack.CurrentPaperOffset;
+                    DropPaper();
+                }
+            }
             
             var localTransform = transform;
             

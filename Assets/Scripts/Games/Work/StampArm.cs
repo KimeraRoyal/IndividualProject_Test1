@@ -82,12 +82,16 @@ namespace IP1
                 StampPaper(rayHit.collider);
             }
         }
+
+        public Behaviour paperCollider;
         
 
         private void StampPaper(Behaviour _paperCollider)
         {
             var paper = _paperCollider.GetComponentInParent<Paper>();
             if (!paper) { return; }
+
+            paperCollider = _paperCollider;
             
             paper.CreateStampMarking(m_stampPoint.position);
 

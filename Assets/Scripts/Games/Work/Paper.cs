@@ -15,16 +15,6 @@ namespace IP1
             m_collider = GetComponentInChildren<Collider2D>();
         }
 
-        private void Start()
-        {
-            m_collider.enabled = false;
-        }
-
-        public void Dropped()
-        {
-            m_collider.enabled = true;
-        }
-
         public void CreateStampMarking(Vector3 _stampPosition)
         {
             var position = _stampPosition;
