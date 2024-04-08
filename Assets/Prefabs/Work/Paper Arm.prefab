@@ -25,7 +25,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3636165525791513126}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 2167236780934046192}
   m_Father: {fileID: 0}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2932911853646308940
 MonoBehaviour:
@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9874d4bc5ffbb74459dc2436d8e85609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_paperPrefab: {fileID: 7810634326288480963, guid: ddfec4f5b448cb24f88d839419205411, type: 3}
+  m_paperPrefab: {fileID: 8667368968499043758, guid: ddfec4f5b448cb24f88d839419205411, type: 3}
+  m_initialStackPaperPrefab: {fileID: 4082113045794710657, guid: de0762d0490662e48b51ef54520a710c, type: 3}
   m_paperOffset: {x: 0, y: -6, z: 0}
+  m_newPaperWaitTime: 0.2
   m_handInTime: 0.3
   m_handInEase: 6
   m_dropPaperWaitTime: 0.5
@@ -173,5 +175,8 @@ MonoBehaviour:
   - {fileID: 7555737691115158702, guid: 0c31189b327cc4d4d96922f47060c43d, type: 3}
   - {fileID: 7735180667970935832, guid: 0c31189b327cc4d4d96922f47060c43d, type: 3}
   - {fileID: -7712640784770536429, guid: 0c31189b327cc4d4d96922f47060c43d, type: 3}
+  m_animate: 1
   m_frameTime: 0.15
   m_frameTimeVariance: 0
+  m_startOnRandomFrame: 0
+  m_randomize: 0

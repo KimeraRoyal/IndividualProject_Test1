@@ -50,7 +50,7 @@ MonoBehaviour:
     m_microgame: {fileID: 5379759832787520318, guid: be8ec81b60e6938489c16481ca7d724f, type: 3}
     m_selector: {fileID: 11400000, guid: 27fd606c06f968f43af221e0f3b1be81, type: 2}
   - m_id: pill_sheet
-    m_microgame: {fileID: 5479266023979035344, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
+    m_microgame: {fileID: 2190425890722791423, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
     m_selector: {fileID: 11400000, guid: e02b9c37eebd228479be0de1722d83ab, type: 2}
   - m_id: pill_swallow
     m_microgame: {fileID: 832594688641034167, guid: b201c8930d9e2bc42ae658596ae61fb3, type: 3}
@@ -86,6 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_prescriptionAmount: 3
   m_pillsPopped: 00000000000000000000000000000000000000000000000000000000
-  m_sheetsPerBox: 3
-  m_sheetsRemaining: 2
+  m_sheetsPerBox: 2
+  m_sheetsRemaining: 0
   m_baseHungriness: 2
+  m_hungriness: 2

@@ -27,10 +27,7 @@ namespace IP1
 
             m_mover = GetComponent<Mover>();
             m_clampPosition = GetComponent<ClampPosition>();
-        }
-
-        private void Start()
-        {
+            
             m_paperStack.OnPaperAdded += OnPaperAdded;
         }
 

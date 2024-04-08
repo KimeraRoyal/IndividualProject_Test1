@@ -9,10 +9,7 @@ namespace IP1
         private void Awake()
         {
             m_paperStack = FindObjectOfType<PaperStack>();
-        }
-
-        private void Start()
-        {
+                
             m_paperStack.OnPaperAdded += OnPaperAdded;
         }
 

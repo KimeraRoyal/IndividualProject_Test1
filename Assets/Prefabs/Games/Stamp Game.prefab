@@ -302,7 +302,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4293775561
   m_fontColor: {r: 0.7882353, g: 0.8156863, b: 0.92941177, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1063,10 +1063,6 @@ PrefabInstance:
     - target: {fileID: 2167236780934046192, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 2932911853646308940, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
-      propertyPath: m_newPaperWaitTime
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3636165525791513126, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
       propertyPath: m_Name

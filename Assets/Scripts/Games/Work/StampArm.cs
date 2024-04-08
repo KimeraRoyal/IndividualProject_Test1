@@ -37,13 +37,13 @@ namespace IP1
             m_paperStack = FindObjectOfType<PaperStack>();
 
             m_clampPosition = GetComponent<ClampPosition>();
+
+            m_paperStack.OnPaperAdded += OnPaperAdded;
         }
 
         private void Start()
         {
             m_loaded = true;
-
-            m_paperStack.OnPaperAdded += OnPaperAdded;
         }
 
         private void Update()

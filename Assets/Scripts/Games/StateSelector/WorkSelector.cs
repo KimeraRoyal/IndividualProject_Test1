@@ -9,6 +9,11 @@ namespace IP1
         [SerializeField] private string m_nextGame;
 
         public override string Select(GameState _state)
-            => _state.Hungry ? m_hungryGame : m_nextGame;
+        {
+            if (_state.Hungry) { return m_hungryGame; }
+
+            _state.PaperStackSize = 0;
+            return m_nextGame;
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace IP1
         [SerializeField] private int m_sheetsPerBox = 3;
         [SerializeField] private int m_sheetsRemaining = 3;
 
+        [SerializeField] private int m_paperStackSize;
+        
         [SerializeField] private int m_baseHungriness = 2;
         [SerializeField] private int m_hungriness = 2;
 
@@ -23,6 +25,12 @@ namespace IP1
         public int PillsRemaining => m_pillsPopped.Count(_pillPopped => !_pillPopped);
 
         public bool NeedsRefill => m_sheetsRemaining < 1 && PillsRemaining < m_prescriptionAmount;
+
+        public int PaperStackSize
+        {
+            get => m_paperStackSize;
+            set => m_paperStackSize = value;
+        }
 
         public int Hungriness => m_hungriness;
         public bool Hungry => m_hungriness > 0;

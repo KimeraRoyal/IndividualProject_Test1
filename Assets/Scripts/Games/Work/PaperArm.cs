@@ -7,10 +7,13 @@ namespace IP1
 {
     public class PaperArm : MonoBehaviour
     {
+        private GameState m_state;
+        
         private PaperStack m_paperStack;
         private StampArm m_stampArm;
         
         [SerializeField] private Paper m_paperPrefab;
+        [SerializeField] private Paper m_initialStackPaperPrefab;
         [SerializeField] private Vector3 m_paperOffset;
 
         [SerializeField] private float m_newPaperWaitTime = 1.0f;
@@ -35,19 +38,22 @@ namespace IP1
 
         private void Awake()
         {
+            m_state = GetComponentInParent<GameState>();
+            
             m_paperStack = FindObjectOfType<PaperStack>();
             m_stampArm = FindObjectOfType<StampArm>();
+            
+            OnPaperDropped += m_paperStack.AddPaper;
+
+            m_paperStack.OnPaperAdded += OnPaperAdded;
+            m_stampArm.OnPaperStamped += OnPaperStamped;
             
             m_startingPosition = transform.position;
         }
 
         private void Start()
         {
-            OnPaperDropped += m_paperStack.AddPaper;
-
-            m_paperStack.OnPaperAdded += OnPaperAdded;
-            m_stampArm.OnPaperStamped += OnPaperStamped;
-
+            SpawnInitialStack();
             SpawnPaper();
         }
 
@@ -71,6 +77,17 @@ namespace IP1
             yield return new WaitUntil(() => !m_spawning);
             yield return new WaitForSeconds(m_newPaperWaitTime);
             SpawnPaper();
+        }
+
+        private void SpawnInitialStack()
+        {
+            if(!m_state) { return; }
+
+            for (var i = 0; i < m_state.PaperStackSize; i++)
+            {
+                var paper = Instantiate(m_initialStackPaperPrefab, m_paperOffset + m_paperStack.CurrentPaperOffset, Quaternion.identity, transform);
+                m_paperStack.AddPaper(paper);
+            }
         }
 
         private void SpawnPaper()
@@ -100,6 +117,7 @@ namespace IP1
         {
             m_heldPaper.transform.SetParent(null);
             OnPaperDropped?.Invoke(m_heldPaper);
+            m_state.PaperStackSize++;
             
             m_heldPaper = null;
         }
