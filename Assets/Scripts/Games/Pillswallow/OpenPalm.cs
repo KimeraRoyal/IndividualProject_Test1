@@ -11,6 +11,7 @@ namespace IP1
     [RequireComponent(typeof(Mover), typeof(Rotator), typeof(MouseMovement))]
     public class OpenPalm : MonoBehaviour
     {
+        private GameState m_gameState;
         private Microgame m_microgame;
         
         private Mover m_mover;
@@ -43,6 +44,7 @@ namespace IP1
         
         private void Awake()
         {
+            m_gameState = GetComponentInParent<GameState>();
             m_microgame = GetComponentInParent<Microgame>();
             
             m_mover = GetComponent<Mover>();
@@ -59,7 +61,9 @@ namespace IP1
         {
             m_mouseMovement.OnMouseMoved += OnMouseMoved;
 
-            SpawnPills(3);
+            var count = 3;
+            if (m_gameState) { count = m_gameState.PrescriptionAmount; }
+            SpawnPills(count);
         }
 
         private void Update()

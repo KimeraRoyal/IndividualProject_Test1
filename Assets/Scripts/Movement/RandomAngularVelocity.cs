@@ -2,7 +2,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Pill : MonoBehaviour
+public class RandomAngularVelocity : MonoBehaviour
 {
     private Rigidbody2D m_rigidbody;
 

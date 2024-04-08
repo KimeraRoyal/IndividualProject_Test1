@@ -71,13 +71,10 @@ namespace IP1
         private void Awake()
         {
             m_spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-
-        private void Start()
-        {
+            
             OnAnimationChange += _animation => { StartAnimation(m_animations[m_currentAnimation]); };
             OnFrameChange += _frame => { m_spriteRenderer.sprite = CurrentAnimation.Frames[_frame]; };
-
+            
             CurrentAnimationIndex = 0;
         }
 

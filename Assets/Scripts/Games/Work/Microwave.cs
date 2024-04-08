@@ -7,6 +7,7 @@ namespace IP1
 {
     public class Microwave : MonoBehaviour
     {
+        private GameState m_state;
         private Microgame m_microgame;
         
         private Timer m_timer;
@@ -31,6 +32,7 @@ namespace IP1
         
         private void Awake()
         {
+            m_state = GetComponentInParent<GameState>();
             m_microgame = GetComponentInParent<Microgame>();
             
             m_timer = GetComponent<Timer>();
@@ -57,6 +59,7 @@ namespace IP1
             m_startButton.OnPressedChange += OnPressedChange;
 
             OnActivated += m_microgame.Clear;
+            if (m_state) { OnActivated += m_state.Eat; }
         }
 
         private void OnTick()

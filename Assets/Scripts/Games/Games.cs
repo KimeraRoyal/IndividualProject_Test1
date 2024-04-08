@@ -6,23 +6,26 @@ using UnityEngine;
 namespace IP1
 {
     [Serializable]
-    public class GameState
+    public class MicrogameInfo
     {
         [SerializeField] private string m_id;
         [SerializeField] private Microgame m_microgame;
         
-        [SerializeField] private string m_nextGame;
+        [SerializeField] private MicrogameSelector m_selector;
 
         public string ID => m_id;
 
         public Microgame Microgame => m_microgame;
 
-        public string NextGame => m_nextGame;
+        public string SelectNextGame(GameState _state)
+            => m_selector.Select(_state);
     }
     
     public class Games : MonoBehaviour
     {
-        [SerializeField] private GameState[] m_states;
+        private GameState m_state;
+        
+        [SerializeField] private MicrogameInfo[] m_states;
         [SerializeField] private string m_firstGame;
 
         [SerializeField] private float m_loadTime = 1.0f;
@@ -34,6 +37,8 @@ namespace IP1
         
         private void Awake()
         {
+            m_state = GetComponent<GameState>();
+            
             m_stateIndexReference = new Dictionary<string, int>();
             for (var i = 0; i < m_states.Length; i++)
             {
@@ -73,7 +78,7 @@ namespace IP1
 
         private void OnNextGameRequested()
         {
-            LoadState(m_stateIndexReference[m_states[m_currentState].NextGame]);
+            LoadState(m_stateIndexReference[m_states[m_currentState].SelectNextGame(m_state)]);
         }
     }
 }

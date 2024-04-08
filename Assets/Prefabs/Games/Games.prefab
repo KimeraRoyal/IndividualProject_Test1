@@ -46,31 +46,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_states:
-  - m_id: pillbox
+  - m_id: pill_box
     m_microgame: {fileID: 5379759832787520318, guid: be8ec81b60e6938489c16481ca7d724f, type: 3}
-    m_nextGame: pillsheet
-  - m_id: pillsheet
+    m_selector: {fileID: 11400000, guid: 27fd606c06f968f43af221e0f3b1be81, type: 2}
+  - m_id: pill_sheet
     m_microgame: {fileID: 5479266023979035344, guid: 0a784a2ff79c25f46994ca53b33c6822, type: 3}
-    m_nextGame: pillswallow
-  - m_id: pillswallow
+    m_selector: {fileID: 11400000, guid: e02b9c37eebd228479be0de1722d83ab, type: 2}
+  - m_id: pill_swallow
     m_microgame: {fileID: 832594688641034167, guid: b201c8930d9e2bc42ae658596ae61fb3, type: 3}
-    m_nextGame: door
+    m_selector: {fileID: 11400000, guid: 60dbfa52c21e1f84eaae6105807424da, type: 2}
   - m_id: door
     m_microgame: {fileID: 3649456300252217975, guid: dc24f4bf49aec1147935285964c44311, type: 3}
-    m_nextGame: breakfast
+    m_selector: {fileID: 11400000, guid: f6b61ca66403f7549b8be19966bf382d, type: 2}
   - m_id: breakfast
     m_microgame: {fileID: 7192635828808388355, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
-    m_nextGame: work
-  - m_id: work
-    m_microgame: {fileID: 328701616836248466, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
-    m_nextGame: lunch
+    m_selector: {fileID: 11400000, guid: 55ea5c3c777b8c14f87e2c06f49d2871, type: 2}
   - m_id: lunch
     m_microgame: {fileID: 7079845386353276851, guid: 0dca41dd4b8c5ea478e8ce3d880617d5, type: 3}
-    m_nextGame: pillbox
+    m_selector: {fileID: 11400000, guid: e8d5436b420acc7458b74e365a21f517, type: 2}
+  - m_id: work
+    m_microgame: {fileID: 328701616836248466, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
+    m_selector: {fileID: 11400000, guid: 1bf7017ebdeee184fb0640c7aa0192ae, type: 2}
   - m_id: waiting_room
     m_microgame: {fileID: 1603438247638720837, guid: 13d8364e7f4aef44a9f62e1035143831, type: 3}
-    m_nextGame: pillbox
-  m_firstGame: pillbox
+    m_selector: {fileID: 11400000, guid: c2205d01914e4884fb7acf0b4718143d, type: 2}
+  m_firstGame: pill_box
   m_loadTime: 0.5
 --- !u!114 &6050777276910281360
 MonoBehaviour:
@@ -86,4 +86,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_prescriptionAmount: 3
   m_pillsPopped: 00000000000000000000000000000000000000000000000000000000
-  m_sheetsRemaining: 3
+  m_sheetsPerBox: 3
+  m_sheetsRemaining: 2
+  m_baseHungriness: 2

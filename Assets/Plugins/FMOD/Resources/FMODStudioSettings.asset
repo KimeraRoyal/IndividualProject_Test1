@@ -609,8 +609,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../IndividualProject_Sounds/PillGame/PillGame.fspro
-  sourceBankPath: ../IndividualProject_Sounds/PillGame/Build
+  sourceProjectPath: C:/Users/Kimera Royal/Documents/FMOD Studio/IndividualProject/PillGame/PillGame.fspro
+  sourceBankPath: C:/Users/Kimera Royal/Documents/FMOD Studio/IndividualProject/PillGame/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
