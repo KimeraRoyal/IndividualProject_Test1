@@ -48,6 +48,17 @@ namespace IP1
             Clamp();
         }
 
+        private void Clamp()
+        {
+            if (!enabled) { return; }
+            
+            var position = transform.localPosition;
+            if((position - m_lastPosition).magnitude < 0.001f) { return; }
+            
+            position = Clamp(position);
+            transform.localPosition = position;
+        }
+
         private Vector3 Clamp(Vector3 _position)
         {
             for (var i = 0; i < 2; i++)
@@ -56,15 +67,6 @@ namespace IP1
             }
 
             return _position;
-        }
-
-        private void Clamp()
-        {
-            var position = transform.localPosition;
-            if((position - m_lastPosition).magnitude < 0.001f) { return; }
-            
-            position = Clamp(position);
-            transform.localPosition = position;
         }
 
         private Vector3 ClampAxis(int _axis, Vector3 _position)

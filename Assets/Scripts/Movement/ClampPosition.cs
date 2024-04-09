@@ -45,17 +45,10 @@ namespace IP1.Movement
             Clamp();
         }
 
-        private Vector3 Clamp(Vector3 _position)
-        {
-            if (m_xClampToBounds) { _position = ClampAxis(0, _position); }
-            if (m_yClampToBounds) { _position = ClampAxis(1, _position); }
-            if (m_zClampToBounds) { _position = ClampAxis(2, _position); }
-
-            return _position;
-        }
-
         private void Clamp()
         {
+            if (!enabled) { return; }
+            
             var position = m_useLocalPosition ? transform.localPosition : transform.position;
 
             position = Clamp(position);
@@ -68,6 +61,15 @@ namespace IP1.Movement
             {
                 transform.position = position;
             }
+        }
+
+        private Vector3 Clamp(Vector3 _position)
+        {
+            if (m_xClampToBounds) { _position = ClampAxis(0, _position); }
+            if (m_yClampToBounds) { _position = ClampAxis(1, _position); }
+            if (m_zClampToBounds) { _position = ClampAxis(2, _position); }
+
+            return _position;
         }
 
         private Vector3 ClampAxis(int _axis, Vector3 _position)

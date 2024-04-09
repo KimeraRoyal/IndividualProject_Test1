@@ -10,6 +10,8 @@ namespace IP1
 
         [SerializeField] private bool m_enabled = true;
 
+        [SerializeField] private float m_minRotationBound = -180.0f, m_maxRotationBound = 180.0f;
+
         [SerializeField] private float m_movementSmoothing = 0.1f;
 
         private Vector3 m_targetRotation;
@@ -40,8 +42,11 @@ namespace IP1
             m_targetRotation = transform.localEulerAngles;
             for (var i = 0; i < 3; i++)
             {
-                m_targetRotation[i] %= 360.0f;
-                if (m_targetRotation[i] > 180.0f) { m_targetRotation[i] -= 360.0f; }
+                var bounds = (m_maxRotationBound - m_minRotationBound);
+                
+                m_targetRotation[i] %= bounds;
+                if (m_targetRotation[i] > m_maxRotationBound) { m_targetRotation[i] -= bounds; }
+                if (m_targetRotation[i] < m_minRotationBound) { m_targetRotation[i] += bounds; }
             }
         }
 
@@ -53,7 +58,7 @@ namespace IP1
 
         protected virtual void Update()
         {
-            if(!m_enabled) { return; }
+            if(!m_enabled || !enabled) { return; }
             
             var newRotation = Vector3.SmoothDamp(m_rotation, m_targetRotation, ref m_velocity, m_movementSmoothing);
             if (OnRotate != null)
@@ -62,7 +67,28 @@ namespace IP1
             }
             m_rotation = newRotation;
 
+            ClampToBounds();
             transform.localEulerAngles = m_rotation;
+        }
+
+        private void ClampToBounds()
+        {
+            for (var i = 0; i < 3; i++)
+            {
+                var bounds = (m_maxRotationBound - m_minRotationBound);
+
+                if (m_rotation[i] > m_maxRotationBound)
+                {
+                    m_rotation[i] -= bounds;
+                    m_targetRotation[i] -= bounds;
+                }
+
+                if (m_rotation[i] < m_minRotationBound)
+                {
+                    m_rotation[i] += bounds;
+                    m_targetRotation[i] += bounds;
+                }
+            }
         }
     }
 }
