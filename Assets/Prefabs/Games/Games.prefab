@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_states:
   - m_id: pill_box
-    m_microgame: {fileID: 5379759832787520318, guid: be8ec81b60e6938489c16481ca7d724f, type: 3}
+    m_microgame: {fileID: 57792552691149146, guid: be8ec81b60e6938489c16481ca7d724f, type: 3}
     m_splashDetails: {fileID: 11400000, guid: b675f0631d53f8044b8657880e3dc0d0, type: 2}
     m_selector: {fileID: 11400000, guid: 27fd606c06f968f43af221e0f3b1be81, type: 2}
   - m_id: pill_sheet
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_splashDetails: {fileID: 0}
     m_selector: {fileID: 11400000, guid: e02b9c37eebd228479be0de1722d83ab, type: 2}
   - m_id: pill_swallow
-    m_microgame: {fileID: 832594688641034167, guid: b201c8930d9e2bc42ae658596ae61fb3, type: 3}
+    m_microgame: {fileID: 9123644605042863876, guid: b201c8930d9e2bc42ae658596ae61fb3, type: 3}
     m_splashDetails: {fileID: 0}
     m_selector: {fileID: 11400000, guid: 60dbfa52c21e1f84eaae6105807424da, type: 2}
   - m_id: door

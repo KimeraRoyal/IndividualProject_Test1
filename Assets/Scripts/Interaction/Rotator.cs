@@ -35,10 +35,17 @@ namespace IP1
             }
         }
 
+        protected virtual void Awake()
+        {
+            Debug.Log(transform.localEulerAngles);
+            m_targetRotation = transform.localEulerAngles;
+        }
+
         protected virtual void Start()
         {
-            m_targetRotation = transform.localEulerAngles;
             m_rotation = m_targetRotation;
+            transform.localEulerAngles = m_targetRotation;
+            Debug.Log(transform.localEulerAngles);
         }
 
         protected virtual void Update()

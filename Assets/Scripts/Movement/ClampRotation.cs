@@ -31,8 +31,6 @@ namespace IP1
                 rotator.OnRotateTarget += Clamp;
                 rotator.OnRotate += Clamp;
             }
-            
-            Clamp();
         }
 
         private void FixedUpdate()
@@ -67,7 +65,7 @@ namespace IP1
 
         private Vector3 ClampAxis(int _axis, Vector3 _rotation)
         {
-            _rotation[_axis] = Mathf.Clamp(_rotation[_axis], m_minRotation[_axis], m_maxRotation[_axis]);
+            _rotation[_axis] = Mathf.Clamp((_rotation[_axis] + 180.0f) % 360.0f, (m_minRotation[_axis] + 180.0f) % 360.0f, (m_maxRotation[_axis] + 180.0f) % 360.0f) - 180.0f;
             return _rotation;
         }
     }

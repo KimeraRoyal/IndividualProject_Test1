@@ -21,8 +21,6 @@ namespace IP1
 
         private SpriteAnimationSet[] m_animationSet;
 
-        [SerializeField] private Camera m_camera;
-
         [SerializeField] private Transform m_pillPrefab;
         [SerializeField] private Transform m_pillSpawnPoint;
         [SerializeField] private Vector3 m_pillSpawnMinOffset, m_pillSpawnMaxOffset;
@@ -32,6 +30,8 @@ namespace IP1
 
         [SerializeField] private float m_dropZ;
         [SerializeField] private float m_dropSpriteHoldTime = 1.0f;
+
+        [SerializeField] private float m_droppedClearWaitTime = 1.0f;
 
         [SerializeField] private float m_moveInSpeed = 1.0f;
         [SerializeField] private float m_moveOutSpeed = 1.0f;
@@ -115,7 +115,13 @@ namespace IP1
             dropSequence.AppendCallback(() => { SetHandAnimation(0); });
             
             OnSwallow?.Invoke();
+            
+            StartCoroutine(WaitToClear());
+        }
 
+        private IEnumerator WaitToClear()
+        {
+            yield return new WaitForSeconds(m_droppedClearWaitTime);
             m_microgame.Clear();
         }
 
