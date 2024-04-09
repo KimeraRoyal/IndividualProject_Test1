@@ -38,6 +38,11 @@ namespace IP1
         protected virtual void Awake()
         {
             m_targetRotation = transform.localEulerAngles;
+            for (var i = 0; i < 3; i++)
+            {
+                m_targetRotation[i] %= 360.0f;
+                if (m_targetRotation[i] > 180.0f) { m_targetRotation[i] -= 360.0f; }
+            }
         }
 
         protected virtual void Start()
