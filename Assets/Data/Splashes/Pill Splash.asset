@@ -9,8 +9,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee9dd7f5786ea4aa437cb2bc55aeb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 492af399a6573c44d8ff0e6772a27c3d, type: 3}
   m_Name: Pill Splash
   m_EditorClassIdentifier: 
-  m_title: Morning
-  m_subtitle: 'Prescription: {0}mg / day (orally)<br>Sheets Remaining: {1}'
+  m_title: '{0} Morning'
+  m_subtitle: '{0}<br>{1}'
+  m_daysOfWeek:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  m_multipleSheetsLine: 'Sheets Remaining: {0}'
+  m_sheetLines:
+  - m_line: Nothing left
+    m_minPillsRemaining: -1
+  - m_line: A bit of a sheet left
+    m_minPillsRemaining: 1
+  - m_line: Some of a sheet left
+    m_minPillsRemaining: 10
+  - m_line: Most of a sheet left
+    m_minPillsRemaining: 20
+  - m_line: One sheet remaining
+    m_minPillsRemaining: 28
+  m_prescriptionLine: 'Prescription: {0}mg / day oral'

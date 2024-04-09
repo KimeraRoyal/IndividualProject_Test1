@@ -2,16 +2,16 @@ using UnityEngine;
 
 namespace IP1
 {
-    [CreateAssetMenu(fileName = "Splash Details", menuName = "Splash/Splash Details")]
+    [CreateAssetMenu(fileName = "Basic Splash", menuName = "Splash/Basic Splash")]
     public class SplashDetails : ScriptableObject
     {
         [SerializeField] private string m_title;
         [SerializeField] private string m_subtitle;
 
-        public string GetTitle()
+        public virtual string GetTitle(GameState _state)
             => m_title;
         
-        public string GetSubtitle(int _prescription, int _sheetsRemaining)
-            => string.Format(m_subtitle, _prescription, _sheetsRemaining);
+        public virtual string GetSubtitle(GameState _state)
+            => m_subtitle;
     }
 }

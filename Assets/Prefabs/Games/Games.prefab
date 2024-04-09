@@ -74,10 +74,18 @@ MonoBehaviour:
     m_microgame: {fileID: 328701616836248466, guid: 60b4e07c92d9f4b429917487a009ae93, type: 3}
     m_splashDetails: {fileID: 0}
     m_selector: {fileID: 11400000, guid: 1bf7017ebdeee184fb0640c7aa0192ae, type: 2}
+  - m_id: weekend
+    m_microgame: {fileID: 9082119507912661569, guid: cbad0ef8d4823c34491f6704857f76b2, type: 3}
+    m_splashDetails: {fileID: 11400000, guid: ca9d3817e2972254983b79cd5cfafc32, type: 2}
+    m_selector: {fileID: 11400000, guid: 07ba0e0581b6eb543928d56dbed7c4c8, type: 2}
   - m_id: waiting_room
     m_microgame: {fileID: 1603438247638720837, guid: 13d8364e7f4aef44a9f62e1035143831, type: 3}
     m_splashDetails: {fileID: 11400000, guid: 0d1753cfaf4ceb241a43c284fb1e0330, type: 2}
     m_selector: {fileID: 11400000, guid: c2205d01914e4884fb7acf0b4718143d, type: 2}
+  - m_id: end_of_day
+    m_microgame: {fileID: 3595042710384623632, guid: fdf186c9028455d479d4450993938e24, type: 3}
+    m_splashDetails: {fileID: 0}
+    m_selector: {fileID: 11400000, guid: 733e7c8a4cde3f6438e703f874148dfb, type: 2}
   m_firstGame: pill_box
   m_loadTime: 0.5
   m_splashTime: 2.5

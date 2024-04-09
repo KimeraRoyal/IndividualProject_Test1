@@ -85,8 +85,8 @@ namespace IP1
         private IEnumerator ShowSplash(int _id)
         {
             m_splashScreen.Active = true;
-            m_splashScreen.Title = m_states[_id].SplashDetails.GetTitle();
-            m_splashScreen.Subtitle = m_states[_id].SplashDetails.GetSubtitle(m_state.PrescriptionAmount * 2, m_state.SheetsRemaining + 1);
+            m_splashScreen.Title = m_states[_id].SplashDetails.GetTitle(m_state);
+            m_splashScreen.Subtitle = m_states[_id].SplashDetails.GetSubtitle(m_state);
 
             yield return new WaitForSeconds(m_splashTime);
             m_splashScreen.Active = false;

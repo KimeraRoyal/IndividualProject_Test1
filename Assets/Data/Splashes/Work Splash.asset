@@ -9,8 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baee9dd7f5786ea4aa437cb2bc55aeb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 383f34f67f212904193b4db4d22f64ff, type: 3}
   m_Name: Work Splash
   m_EditorClassIdentifier: 
-  m_title: Afternoon
-  m_subtitle: Clocked In
+  m_title: '{0} Afternoon'
+  m_subtitle: Clocked in
+  m_daysOfWeek:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday

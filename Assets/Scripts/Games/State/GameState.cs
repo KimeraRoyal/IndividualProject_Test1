@@ -6,6 +6,9 @@ namespace IP1
 {
     public class GameState : MonoBehaviour
     {
+        [SerializeField] private int m_daysInWeek = 5;
+        [SerializeField] private int m_currentDay;
+        
         [SerializeField] private int m_prescriptionAmount = 3;
 
         [SerializeField] private bool[] m_pillsPopped = new bool[7 * 4];
@@ -16,6 +19,8 @@ namespace IP1
         
         [SerializeField] private int m_baseHungriness = 2;
         [SerializeField] private int m_hungriness = 2;
+
+        public int CurrentDay => m_currentDay;
 
         public int PrescriptionAmount => m_prescriptionAmount;
 
@@ -34,6 +39,11 @@ namespace IP1
 
         public int Hungriness => m_hungriness;
         public bool Hungry => m_hungriness > 0;
+
+        public void EndOfDay()
+        {
+            m_currentDay = (m_currentDay + 1) % m_daysInWeek;
+        }
 
         public void PopPill(int _index)
         {
