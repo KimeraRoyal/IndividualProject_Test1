@@ -612,8 +612,8 @@ MonoBehaviour:
   sourceProjectPath: C:/Users/Kimera Royal/Documents/FMOD Studio/IndividualProject/PillGame/PillGame.fspro
   sourceBankPath: C:/Users/Kimera Royal/Documents/FMOD Studio/IndividualProject/PillGame/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
-  ShowBankRefreshWindow: 1
+  BankRefreshCooldown: 1
+  ShowBankRefreshWindow: 0
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

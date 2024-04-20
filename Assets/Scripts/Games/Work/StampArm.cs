@@ -1,4 +1,6 @@
 using System;
+using FMOD.Studio;
+using FMODUnity;
 using IP1.Movement;
 using UnityEngine;
 
@@ -11,6 +13,7 @@ namespace IP1
         private ClampPosition m_clampPosition;
         
         [SerializeField] private float m_minReloadY;
+        [SerializeField] private float m_minInkY;
         [SerializeField] private float m_maxStampY;
 
         [SerializeField] private float m_minVelocityForStamping = 0.5f;
@@ -22,6 +25,12 @@ namespace IP1
 
         [SerializeField] private Transform m_stampPoint;
 
+        [SerializeField] private EventReference m_stampDownEvent;
+        [ParamRef] [SerializeField] private string m_inkParameter;
+        [ParamRef] [SerializeField] private string m_velocityParameter;
+
+        [SerializeField] private EventReference m_stampUpEvent;
+
         private Vector3 m_lastPosition;
         private float m_velocity;
         
@@ -29,8 +38,12 @@ namespace IP1
         private float m_minVelocitySmoothingVelocity;
 
         private bool m_loaded;
+        private bool m_hasInk;
 
         public Action OnPaperStamped;
+
+        private EventDescription m_stampDownDescription;
+        private bool m_stampDownDirty;
 
         private void Awake()
         {
@@ -43,12 +56,16 @@ namespace IP1
 
         private void Start()
         {
+            m_stampDownDescription = RuntimeManager.GetEventDescription(m_stampDownEvent);
+            
             m_loaded = true;
         }
 
         private void Update()
         {
             Reload();
+            RefillInk();
+            
             CalculateVelocity();
             DetectStamp();
         }
@@ -58,6 +75,14 @@ namespace IP1
             if (m_loaded || transform.localPosition.y < m_minReloadY + m_paperStack.CurrentPaperOffset.y) { return; }
 
             m_loaded = true;
+            PlayStampUpSound();
+        }
+
+        private void RefillInk()
+        {
+            if (m_hasInk || transform.localPosition.y < m_minInkY + m_paperStack.CurrentPaperOffset.y) { return; }
+
+            m_hasInk = true;
         }
 
         private void CalculateVelocity()
@@ -77,27 +102,28 @@ namespace IP1
             var rayHit = Physics2D.BoxCast((Vector2) transform.position + m_boxcastOrigin, m_boxcastSize, 0, Vector2.zero, 0, m_boxcastLayerMask);
             if(rayHit.collider == null) { return; }
 
-            if (m_minVelocity < -m_minVelocityForStamping)
-            {
-                StampPaper(rayHit.collider);
-            }
+            StampPaper(rayHit.collider);
         }
-
-        public Behaviour paperCollider;
-        
 
         private void StampPaper(Behaviour _paperCollider)
         {
             var paper = _paperCollider.GetComponentInParent<Paper>();
             if (!paper) { return; }
 
-            paperCollider = _paperCollider;
+            var hasEnoughVelocity = m_minVelocity < -m_minVelocityForStamping;
+            var canStamp = m_hasInk && hasEnoughVelocity;
+            
+            PlayStampSound(canStamp);
+            
+            if(!canStamp) { return; }
             
             paper.CreateStampMarking(m_stampPoint.position);
-
             _paperCollider.enabled = false;
             
             OnPaperStamped?.Invoke();
+            
+            m_minVelocity = 0.0f;
+            m_hasInk = false;
         }
 
         private void OnPaperAdded(Paper _paper)
@@ -105,6 +131,27 @@ namespace IP1
             var offset = Vector3.up * m_paperStack.PaperOffset.y;
             m_clampPosition.MinBounds += offset;
             m_clampPosition.MaxBounds += offset;
+        }
+
+        private void PlayStampSound(bool _hasInk)
+        {
+            m_stampDownDescription.createInstance(out var eventInstance);
+
+            eventInstance.setParameterByName(m_inkParameter, _hasInk ? 1 : 0);
+            eventInstance.setParameterByName(m_velocityParameter, Mathf.Abs(m_minVelocity));
+
+            eventInstance.start();
+            
+            m_stampDownDirty = m_hasInk;
+        }
+
+        private void PlayStampUpSound()
+        {
+            if (!m_stampDownDirty) { return; }
+
+            RuntimeManager.PlayOneShot(m_stampUpEvent);
+            
+            m_stampDownDirty = false;
         }
     }
 }

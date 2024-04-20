@@ -139,6 +139,69 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1987174572404628500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4916965955782381143}
+  - component: {fileID: 8042902864514571799}
+  m_Layer: 0
+  m_Name: Hum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4916965955782381143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987174572404628500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8897917346454610688}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8042902864514571799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987174572404628500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1032202348
+      Data2: 1236970237
+      Data3: 728222893
+      Data4: 1271559953
+    Path: event:/Work/Microwave/Hum
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2116586458083090591
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +512,7 @@ Transform:
   m_Children:
   - {fileID: 414736837268925935}
   - {fileID: 782540404585353498}
+  - {fileID: 4916965955782381143}
   m_Father: {fileID: 5900291035113605205}
   m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -980,6 +1044,7 @@ MonoBehaviour:
   - {fileID: 3333310913979541176, guid: f40d9267158f8e142b796e3ded98064b, type: 3}
   - {fileID: 8204477652052909426, guid: f40d9267158f8e142b796e3ded98064b, type: 3}
   - {fileID: 2188305670653204117, guid: f40d9267158f8e142b796e3ded98064b, type: 3}
+  m_animate: 1
   m_frameTime: 0.8
   m_frameTimeVariance: 0
   m_startOnRandomFrame: 0
@@ -1006,6 +1071,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   m_colorChangeTime: 0.2
   m_colorChangeEase: 1
+  m_changeToOnStart: -1
 --- !u!4 &2042270905418857758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: f40d9267158f8e142b796e3ded98064b, type: 3}
@@ -1398,6 +1464,7 @@ MonoBehaviour:
   - {fileID: -3469376218783814471, guid: c89b5cb315f906643bf452599e9c64fe, type: 3}
   - {fileID: -1204843553074260879, guid: c89b5cb315f906643bf452599e9c64fe, type: 3}
   - {fileID: -29805796174059522, guid: c89b5cb315f906643bf452599e9c64fe, type: 3}
+  m_animate: 1
   m_frameTime: 0.4
   m_frameTimeVariance: 0.1
   m_startOnRandomFrame: 0
@@ -1428,6 +1495,7 @@ MonoBehaviour:
   - {fileID: -232261466071193897, guid: c89b5cb315f906643bf452599e9c64fe, type: 3}
   - {fileID: -7854255921111383097, guid: c89b5cb315f906643bf452599e9c64fe, type: 3}
   - {fileID: -6815707986125908391, guid: c89b5cb315f906643bf452599e9c64fe, type: 3}
+  m_animate: 1
   m_frameTime: 0.6
   m_frameTimeVariance: 0
   m_startOnRandomFrame: 0

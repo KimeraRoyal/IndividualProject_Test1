@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086628512326591882}
   - component: {fileID: 3777892555496535486}
+  - component: {fileID: 6877726898598415989}
   m_Layer: 7
   m_Name: Button
   m_TagString: Untagged
@@ -24,7 +25,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3364413416316074272}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 7205753213142835029}
   m_Father: {fileID: 0}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3777892555496535486
 MonoBehaviour:
@@ -45,6 +46,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d250943057db80048b9b1914b0c4f63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6877726898598415989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364413416316074272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5567509e25191094cb5578cfc5dbb0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_soundEvent:
+    Guid:
+      Data1: -538267204
+      Data2: 1118615614
+      Data3: 2083944833
+      Data4: -1284559184
+    Path: event:/Work/Microwave/Beep
 --- !u!1001 &8417276450336925323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200,6 +220,7 @@ MonoBehaviour:
   - {fileID: -4493429239885588191, guid: 330ab5b3a58f168419dade64cba4eb49, type: 3}
   - {fileID: 3320607087621856852, guid: 330ab5b3a58f168419dade64cba4eb49, type: 3}
   - {fileID: 849235738942624839, guid: 330ab5b3a58f168419dade64cba4eb49, type: 3}
+  m_animate: 1
   m_frameTime: 0.6
   m_frameTimeVariance: 0
   m_startOnRandomFrame: 1

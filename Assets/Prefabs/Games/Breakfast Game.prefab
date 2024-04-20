@@ -215,7 +215,7 @@ Transform:
   - {fileID: 4773089880095569669}
   - {fileID: 6492497946187696520}
   m_Father: {fileID: 0}
-  m_RootOrder: -2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7192635828808388355
 MonoBehaviour:
@@ -383,6 +383,10 @@ PrefabInstance:
       propertyPath: m_meal
       value: 
       objectReference: {fileID: 7591876302204650079, guid: d5dfaea5e55e51742a356777df92fc28, type: 3}
+    - target: {fileID: 560772064922483708, guid: 53e0f165d09351544996de8146195113, type: 3}
+      propertyPath: m_soundEvent.Path
+      value: event:/Work/Microwave/Button
+      objectReference: {fileID: 0}
     - target: {fileID: 5900291035113605205, guid: 53e0f165d09351544996de8146195113, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -10,7 +10,7 @@ namespace IP1
         [SerializeField] private Vector3 m_openRotation;
         [SerializeField] private float m_openTime = 1.0f;
         [SerializeField] private Ease m_openEasing = Ease.Linear;
-
+        
         private void Awake()
         {
             m_handle = GetComponentInChildren<Handle>();

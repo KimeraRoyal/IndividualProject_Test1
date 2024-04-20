@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using DG.Tweening;
+using FMODUnity;
 using UnityEngine;
 
 namespace IP1
@@ -25,6 +26,8 @@ namespace IP1
 
         [SerializeField] private float m_handOutTime = 1.0f;
         [SerializeField] private Ease m_handOutEase = Ease.Linear;
+
+        [SerializeField] private EventReference m_paperSlideEvent;
 
         private Vector3 m_startingPosition;
 
@@ -114,6 +117,7 @@ namespace IP1
             m_sequence.AppendInterval(m_dropPaperWaitTime);
             m_sequence.Append(localTransform.DOMove(m_startingPosition, m_handOutTime).SetEase(m_handOutEase));
             m_sequence.AppendCallback(FinishSpawning);
+            RuntimeManager.PlayOneShot(m_paperSlideEvent);
         }
 
         private void FinishSpawning()

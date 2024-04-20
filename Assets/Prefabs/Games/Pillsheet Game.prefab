@@ -59,10 +59,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene
       objectReference: {fileID: 0}
-    - target: {fileID: 873380733635732376, guid: 65755e84791211049a368272a2fa86a2, type: 3}
-      propertyPath: m_height
-      value: 480
-      objectReference: {fileID: 0}
     - target: {fileID: 1058143503763698542, guid: 65755e84791211049a368272a2fa86a2, type: 3}
       propertyPath: m_RootOrder
       value: -1

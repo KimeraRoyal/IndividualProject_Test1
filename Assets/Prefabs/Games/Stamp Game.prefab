@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &536991152737171114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6512149348135569733}
+  - component: {fileID: 5960472039796796711}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6512149348135569733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536991152737171114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2993628825123827758}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5960472039796796711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536991152737171114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 979838405
+      Data2: 1328563973
+      Data3: 524281507
+      Data4: 1496986050
+    Path: event:/Work/Ambience
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1285543286334556636
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,6 +100,7 @@ Transform:
   - {fileID: 3645985000751453965}
   - {fileID: 2534788003807836674}
   - {fileID: 955494419847459546}
+  - {fileID: 6512149348135569733}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -131,8 +195,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7375882826241379826}
   - component: {fileID: 2032453117324690575}
-  - component: {fileID: 7251029933471145131}
   - component: {fileID: 4089051409932077092}
+  - component: {fileID: 8455841553022955790}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,14 +270,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7251029933471145131
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450392315794234700}
-  m_Enabled: 1
 --- !u!114 &4089051409932077092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +282,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e1f4032e7f38040932bac4cccfdc30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8455841553022955790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450392315794234700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1910181012113088650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1133,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.75
       objectReference: {fileID: 0}
+    - target: {fileID: 2932911853646308940, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
+      propertyPath: m_paperSlideEvent.Path
+      value: event:/Work/Paper/Slide
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932911853646308940, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
+      propertyPath: m_paperSlideEvent.Guid.Data1
+      value: 333846809
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932911853646308940, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
+      propertyPath: m_paperSlideEvent.Guid.Data2
+      value: 1187962908
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932911853646308940, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
+      propertyPath: m_paperSlideEvent.Guid.Data3
+      value: -1558225007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932911853646308940, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
+      propertyPath: m_paperSlideEvent.Guid.Data4
+      value: 843113472
+      objectReference: {fileID: 0}
     - target: {fileID: 3636165525791513126, guid: 2f4006b45ab585047b93d8105ec8f01e, type: 3}
       propertyPath: m_Name
       value: Paper Arm
@@ -1131,15 +1220,50 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_minInkY
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_minReloadY
+      value: -2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_inkParameter
+      value: Stamp Has Ink
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_stampUpEvent.Path
+      value: event:/Work/Stamp/Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_velocityParameter
+      value: Stamp Velocity
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_boxcastLayerMask.m_Bits
       value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_stampUpEvent.Guid.Data1
+      value: -838400439
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_stampUpEvent.Guid.Data2
+      value: 1138792817
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_stampUpEvent.Guid.Data3
+      value: 1680701061
+      objectReference: {fileID: 0}
+    - target: {fileID: 974435576410730096, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+      propertyPath: m_stampUpEvent.Guid.Data4
+      value: -1070474382
       objectReference: {fileID: 0}
     - target: {fileID: 2328162388719472227, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
       propertyPath: m_Name
       value: Stamp Arm
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2921101067974987389, guid: 6ab755d26a62cde4584e67017ff02703, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

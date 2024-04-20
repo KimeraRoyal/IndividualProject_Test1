@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 895269610590601988}
   - component: {fileID: 974435576410730096}
-  - component: {fileID: 2921101067974987389}
   - component: {fileID: 8579741179499194585}
   m_Layer: 0
   m_Name: Stamp Arm
@@ -34,7 +33,7 @@ Transform:
   - {fileID: 2761267111517109878}
   - {fileID: 4253504150605669630}
   m_Father: {fileID: 0}
-  m_RootOrder: -2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &974435576410730096
 MonoBehaviour:
@@ -58,23 +57,13 @@ MonoBehaviour:
   m_boxcastOrigin: {x: 0, y: 0.3}
   m_boxcastSize: {x: 5.5, y: 1}
   m_stampPoint: {fileID: 4253504150605669630}
---- !u!114 &2921101067974987389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2328162388719472227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b58542cfff5a8964eb5b8dbc5e60e69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_enabled: 1
-  m_movementSmoothing: 0.1
-  m_xFollow: 1
-  m_yFollow: 1
-  m_speed: {x: 0.1, y: 0.4}
+  m_stampDownEvent:
+    Guid:
+      Data1: -1148048085
+      Data2: 1312165433
+      Data3: 1580871843
+      Data4: 40550836
+    Path: event:/Work/Stamp/Down
 --- !u!114 &8579741179499194585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +78,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_xClampToBounds: 1
   m_yClampToBounds: 1
-  m_minBounds: {x: -1.5, y: -2.7}
-  m_maxBounds: {x: 1.5, y: 10}
+  m_zClampToBounds: 0
+  m_minBounds: {x: -1.5, y: -2.7, z: 0}
+  m_maxBounds: {x: 1.5, y: 10, z: 0}
   m_useLocalPosition: 0
 --- !u!1 &7001091354436830864
 GameObject:
@@ -271,6 +261,7 @@ MonoBehaviour:
   - {fileID: 8527214644461596833, guid: a4f58ae7237d021468858f2497680072, type: 3}
   - {fileID: -5391329975404220774, guid: a4f58ae7237d021468858f2497680072, type: 3}
   - {fileID: 5701701706230510640, guid: a4f58ae7237d021468858f2497680072, type: 3}
+  m_animate: 1
   m_frameTime: 0.5
   m_frameTimeVariance: 0
   m_startOnRandomFrame: 0
@@ -301,6 +292,7 @@ MonoBehaviour:
   - {fileID: 5058173376965301388, guid: a4f58ae7237d021468858f2497680072, type: 3}
   - {fileID: 6265244329440850661, guid: a4f58ae7237d021468858f2497680072, type: 3}
   - {fileID: 4371260990145029639, guid: a4f58ae7237d021468858f2497680072, type: 3}
+  m_animate: 1
   m_frameTime: 0.2
   m_frameTimeVariance: 0
   m_startOnRandomFrame: 0
