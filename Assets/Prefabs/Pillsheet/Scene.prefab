@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sheet
       objectReference: {fileID: 0}
+    - target: {fileID: 2002852090012800581, guid: fefcf92b4af62624aad896c05fa65605, type: 3}
+      propertyPath: m_waitTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5254731466943348531, guid: fefcf92b4af62624aad896c05fa65605, type: 3}
       propertyPath: m_RootOrder
       value: -1

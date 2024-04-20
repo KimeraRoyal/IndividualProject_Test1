@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 1506680288594915935}
   - component: {fileID: 7367053372544521071}
   - component: {fileID: 1264749505210045621}
+  - component: {fileID: 2961848075617034142}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   - {fileID: 5499323244647938357}
   - {fileID: 7473407839764954439}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 77.12}
 --- !u!114 &4405457560203396947
 MonoBehaviour:
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_enabled: 1
+  m_minRotationBound: -180
+  m_maxRotationBound: 180
   m_movementSmoothing: 0.2
 --- !u!114 &296532010836088103
 MonoBehaviour:
@@ -133,6 +136,7 @@ MonoBehaviour:
   m_colliders: {fileID: 576262922478406187}
   m_dropZ: -7
   m_dropSpriteHoldTime: 1
+  m_droppedClearWaitTime: 1
   m_moveInSpeed: 0.5
   m_moveOutSpeed: 0.3
   m_rotateArmSpeed: 1
@@ -172,6 +176,28 @@ MonoBehaviour:
   m_minRotation: {x: 0, y: 0, z: 50}
   m_maxRotation: {x: 0, y: 0, z: 80}
   m_useLocalRotation: 0
+--- !u!114 &2961848075617034142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090354645204755942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b946ccd2f7b014a84e2349e6f4e65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_minVelocity: 0.02
+  m_velocityFalloff: 0.05
+  m_axisFactors: {x: 0.1, y: 1, z: 0}
+  m_soundEvent:
+    Guid:
+      Data1: 763963153
+      Data2: 1108217911
+      Data3: 2114371494
+      Data4: -1074669318
+    Path: event:/Player/Clothing Move
 --- !u!1 &2226462992846965779
 GameObject:
   m_ObjectHideFlags: 0

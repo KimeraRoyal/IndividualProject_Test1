@@ -272,7 +272,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed78d251ca7e08644b5e381c35646548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_fallSoundLevelY: -0.4
   m_dropLevelY: -7
+  m_fallEvent:
+    Guid:
+      Data1: 1625810231
+      Data2: 1198544558
+      Data3: -944013421
+      Data4: 1326415729
+    Path: event:/Pills/Sheet/Fall
 --- !u!1001 &8072990153295102847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,6 +332,74 @@ PrefabInstance:
     - target: {fileID: 4151763427844832609, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
       propertyPath: m_Name
       value: Right Arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_minDistance
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_distanceDropoff
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_dropSheetEvent.Path
+      value: event:/Pills/Sheet/Drop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_grabSheetEvent.Path
+      value: event:/Pills/Sheet/Grab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_jostleSheetEvent.Path
+      value: event:/Pills/Sheet/Jostle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_dropSheetEvent.Guid.Data1
+      value: -625718373
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_dropSheetEvent.Guid.Data2
+      value: 1222206187
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_dropSheetEvent.Guid.Data3
+      value: -290419823
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_dropSheetEvent.Guid.Data4
+      value: -352423991
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_grabSheetEvent.Guid.Data1
+      value: 1036128612
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_grabSheetEvent.Guid.Data2
+      value: 1173899323
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_grabSheetEvent.Guid.Data3
+      value: 1223163783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_grabSheetEvent.Guid.Data4
+      value: 387983782
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_jostleSheetEvent.Guid.Data1
+      value: -690070423
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_jostleSheetEvent.Guid.Data2
+      value: 1121894172
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_jostleSheetEvent.Guid.Data3
+      value: 2139497142
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488974224279035628, guid: 680c571c2a1e3fd44b681d10415b32e6, type: 3}
+      propertyPath: m_jostleSheetEvent.Guid.Data4
+      value: -508069091
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

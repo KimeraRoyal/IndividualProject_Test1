@@ -24,7 +24,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022172031807230371}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 939568050006860426}
   m_Father: {fileID: 8745134966677720698}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1219677479798446339
 MonoBehaviour:
@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 6498688318960787493}
   - component: {fileID: 6986704445951132296}
   - component: {fileID: 1031753515596082684}
+  - component: {fileID: 6408532898939722661}
   m_Layer: 8
   m_Name: RightWristTarget
   m_TagString: Untagged
@@ -211,13 +212,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3381736957386112014}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.9999886, w: -0.0047870865}
   m_LocalPosition: {x: -16.4, y: 2.6748796, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1293270832698094990}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &755477854067203350
 CircleCollider2D:
@@ -310,9 +311,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_xClampToBounds: 0
   m_yClampToBounds: 1
-  m_minBounds: {x: -10, y: -5}
-  m_maxBounds: {x: 10, y: 7}
+  m_zClampToBounds: 0
+  m_minBounds: {x: -10, y: -5, z: 0}
+  m_maxBounds: {x: 10, y: 7, z: 0}
   m_useLocalPosition: 0
+--- !u!114 &6408532898939722661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381736957386112014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b946ccd2f7b014a84e2349e6f4e65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_minVelocity: 0.1
+  m_velocityFalloff: 0.05
+  m_axisFactors: {x: 0.1, y: 1, z: 0}
+  m_soundEvent:
+    Guid:
+      Data1: 763963153
+      Data2: 1108217911
+      Data3: 2114371494
+      Data4: -1074669318
+    Path: event:/Player/Clothing Move
 --- !u!1 &4151763427844832609
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +352,7 @@ GameObject:
   - component: {fileID: 6488974224279035628}
   - component: {fileID: 5439730755492850576}
   - component: {fileID: 3128461874644687552}
+  - component: {fileID: 7357676479898681329}
   m_Layer: 0
   m_Name: Right Arm
   m_TagString: Untagged
@@ -342,7 +367,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4151763427844832609}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.713425, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -350,6 +374,7 @@ Transform:
   m_Children:
   - {fileID: 8745134966677720698}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2920580006160568654
 Animator:
@@ -420,6 +445,28 @@ MonoBehaviour:
     m_Bits: 128
   m_interactionPoint: {fileID: 3487691502506879072}
   m_interactionCastRadius: 0.83
+  m_distanceDropoff: 0.1
+  m_grabSheetEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  m_dropSheetEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  m_jostleSheetEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!114 &5439730755492850576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58542cfff5a8964eb5b8dbc5e60e69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_enabled: 1
+  m_movementSmoothing: 0.1
   m_xFollow: 1
   m_yFollow: 0
   m_speed: {x: 0.2, y: 0.2}
@@ -449,9 +498,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_xClampToBounds: 1
   m_yClampToBounds: 0
-  m_minBounds: {x: -5, y: 0}
-  m_maxBounds: {x: 16, y: 0}
+  m_zClampToBounds: 0
+  m_minBounds: {x: -5, y: 0, z: 0}
+  m_maxBounds: {x: 16, y: 0, z: 0}
   m_useLocalPosition: 1
+--- !u!114 &7357676479898681329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151763427844832609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1456397826
+      Data2: 1200699282
+      Data3: -1588229479
+      Data4: -339872605
+    Path: event:/Player/Finger Connect
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7719185982989256581
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,13 +556,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7719185982989256581}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.0031419243, w: -0.9999951}
   m_LocalPosition: {x: 6.32, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4979284814097303651}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7958744412542580644
 PrefabInstance:

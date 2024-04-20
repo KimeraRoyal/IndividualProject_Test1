@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 7205753213142835029}
   m_Father: {fileID: 0}
-  m_RootOrder: -2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3777892555496535486
 MonoBehaviour:
@@ -58,13 +58,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567509e25191094cb5578cfc5dbb0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_soundEvent:
+  m_pressedEvent:
     Guid:
       Data1: -538267204
       Data2: 1118615614
       Data3: 2083944833
       Data4: -1284559184
-    Path: event:/Work/Microwave/Beep
+    Path: event:/Work/Microwave/Button
+  m_unpressedEvent:
+    Guid:
+      Data1: 695386450
+      Data2: 1259181445
+      Data3: -1611140729
+      Data4: 2053906884
+    Path: event:/Work/Microwave/Button Unpress
+  m_waitTime: 0.1
 --- !u!1001 &8417276450336925323
 PrefabInstance:
   m_ObjectHideFlags: 0

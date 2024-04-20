@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797750353248679799, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
+      propertyPath: m_pressedEvent.Path
+      value: event:/Work/Microwave/Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797750353248679799, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
+      propertyPath: m_pressedEvent.Guid.Data1
+      value: -538267204
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797750353248679799, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
+      propertyPath: m_pressedEvent.Guid.Data2
+      value: 1118615614
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797750353248679799, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
+      propertyPath: m_pressedEvent.Guid.Data3
+      value: 2083944833
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797750353248679799, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
+      propertyPath: m_pressedEvent.Guid.Data4
+      value: -1284559184
+      objectReference: {fileID: 0}
     - target: {fileID: 5832120928071008521, guid: 2665b4281fdd0f3409f4ed92ae56a1bf, type: 3}
       propertyPath: m_meal
       value: 
