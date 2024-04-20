@@ -53,12 +53,12 @@ namespace IP1
             {
                 m_stateIndexReference.Add(m_states[i].ID, i);
             }
-
-            m_splashScreen.Active = false;
         }
 
         private void Start()
         {
+            m_splashScreen.Active = false;
+            
             LoadState(m_stateIndexReference[m_firstGame]);
         }
 

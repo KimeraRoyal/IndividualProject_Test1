@@ -5,8 +5,10 @@ namespace IP1
 {
     public class Handle : MonoBehaviour
     {
-        private Microgame m_microgame;
+        private GameState m_state;
         
+        private Microgame m_microgame;
+
         [SerializeField] private Transform m_gripPoint;
         
         [SerializeField] private float m_minAngle = -180;
@@ -34,11 +36,14 @@ namespace IP1
 
         private void Awake()
         {
+            m_state = GetComponentInParent<GameState>();
+            
             m_microgame = GetComponentInParent<Microgame>();
         }
 
         private void Start()
         {
+            OnOpened += m_state.BecomeHungry;
             OnOpened += m_microgame.Clear;
         }
 
