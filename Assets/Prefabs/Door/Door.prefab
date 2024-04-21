@@ -23,7 +23,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5239951265329537682}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,6 +31,7 @@ Transform:
   - {fileID: 2347774706218400108}
   - {fileID: 2676784386456141847}
   m_Father: {fileID: 5808383792577672729}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6052143396846061523
 GameObject:
@@ -56,13 +56,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6052143396846061523}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2676784386456141847}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6084666458377063726
 GameObject:
@@ -89,13 +89,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6084666458377063726}
-  serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -4.19, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 50, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4896498310503938088}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3751356086946033570
 MeshFilter:
@@ -173,13 +173,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7069223860692353486}
-  serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2676784386456141847}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &4291145439664767558
 MeshFilter:
@@ -276,7 +276,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8716027220473141253}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.19, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -284,6 +283,7 @@ Transform:
   m_Children:
   - {fileID: 4896498310503938088}
   m_Father: {fileID: 0}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275100287647757642
 MonoBehaviour:
@@ -300,6 +300,13 @@ MonoBehaviour:
   m_openRotation: {x: 0.5, y: -95, z: 0}
   m_openTime: 3
   m_openEasing: 30
+  m_openEvent:
+    Guid:
+      Data1: -642860013
+      Data2: 1268537817
+      Data3: -1040754781
+      Data4: -479611030
+    Path: event:/Door/Open
 --- !u!1 &8736650845271843295
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +331,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8736650845271843295}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.925, y: 0.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -333,6 +339,7 @@ Transform:
   - {fileID: 6759502096820850665}
   - {fileID: 6361834921029733475}
   m_Father: {fileID: 4896498310503938088}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5161510210609516503
 MonoBehaviour:
@@ -354,3 +361,36 @@ MonoBehaviour:
   m_angleToUnlock: 40
   m_angleToOpen: -65
   m_angleSmoothing: 0.15
+  m_handleUpEvent:
+    Guid:
+      Data1: -2125914832
+      Data2: 1183947841
+      Data3: -994956632
+      Data4: -1686368569
+    Path: event:/Door/Handle/Up
+  m_handleDownEvent:
+    Guid:
+      Data1: -151329610
+      Data2: 1217675695
+      Data3: -1730604394
+      Data4: -138649651
+    Path: event:/Door/Handle/Locked
+  m_handleUpEventUnlocked:
+    Guid:
+      Data1: -151329610
+      Data2: 1217675695
+      Data3: -1730604394
+      Data4: -138649651
+    Path: event:/Door/Handle/Locked
+  m_handleDownEventUnlocked:
+    Guid:
+      Data1: -1124196388
+      Data2: 1111580507
+      Data3: 72133782
+      Data4: -1712482937
+    Path: event:/Door/Handle/Down
+  m_angleState: 0
+  m_minAngleSoundOffset: 10
+  m_minAngleSoundOffsetUnlocked: 10
+  m_maxAngleSoundOffset: 10
+  m_maxAngleSoundOffsetUnlocked: 10

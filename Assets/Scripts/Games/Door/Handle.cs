@@ -1,10 +1,18 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 
 namespace IP1
 {
     public class Handle : MonoBehaviour
     {
+        private enum AngleState
+        {
+            Resting,
+            Up,
+            Down
+        }
+        
         private GameState m_state;
         
         private Microgame m_microgame;
@@ -22,6 +30,13 @@ namespace IP1
 
         [SerializeField] private float m_angleSmoothing = 0.3f;
 
+        [SerializeField] private EventReference m_handleUpEvent, m_handleDownEvent;
+        [SerializeField] private EventReference m_handleUpEventUnlocked, m_handleDownEventUnlocked;
+        
+        [SerializeField] private AngleState m_angleState;
+        [SerializeField] private float m_minAngleSoundOffset = 10, m_minAngleSoundOffsetUnlocked = 10;
+        [SerializeField] private float m_maxAngleSoundOffset = 10, m_maxAngleSoundOffsetUnlocked = 10;
+        
         private float m_angle;
         private float m_angleTarget;
         private float m_angleVelocity;
@@ -43,7 +58,7 @@ namespace IP1
 
         private void Start()
         {
-            OnOpened += m_state.BecomeHungry;
+            if(m_state) { OnOpened += m_state.BecomeHungry; }
             OnOpened += m_microgame.Clear;
         }
 
@@ -51,7 +66,8 @@ namespace IP1
         {
             m_angle = Mathf.SmoothDamp(m_angle, m_angleTarget, ref m_angleVelocity, m_angleSmoothing);
             transform.localEulerAngles = Vector3.forward * m_angle;
-            
+
+            CheckAngleState();
             CheckUnlock();
             CheckOpen();
         }
@@ -76,6 +92,42 @@ namespace IP1
             OnOpened?.Invoke();
 
             m_angleTarget = 0;
+        }
+
+        private void CheckAngleState()
+        {
+            var minAngleOffset = m_locked ? m_minAngleSoundOffset : m_minAngleSoundOffsetUnlocked;
+            var maxAngleOffset = m_locked ? m_maxAngleSoundOffset : m_maxAngleSoundOffsetUnlocked;
+            
+            var minAngle = (m_locked ? m_minAngle : m_minAngleUnlocked) + minAngleOffset;
+            var maxAngle = (m_locked ? m_maxAngle : m_maxAngleUnlocked) - maxAngleOffset;
+
+            var angleState = AngleState.Resting;
+            if (m_angle > maxAngle) { angleState = AngleState.Up; }
+            else if (m_angle < minAngle) { angleState = AngleState.Down; }
+
+            if (angleState != m_angleState)
+            {
+                switch (angleState)
+                {
+                    case AngleState.Up:
+                    {
+                        RuntimeManager.PlayOneShot(m_locked ? m_handleUpEvent : m_handleUpEventUnlocked);
+                        break;
+                    }
+                    case AngleState.Down:
+                    {
+                        RuntimeManager.PlayOneShot(m_locked ? m_handleDownEvent : m_handleDownEventUnlocked);
+                        break;
+                    }
+                    case AngleState.Resting:
+                    {
+                        break;
+                    }
+                }
+            }
+            
+            m_angleState = angleState;
         }
 
         // TODO: With how this class and TurnHandle work, the angle will snap if you hold the handle up and then trace a circle clockwise. This implies a different approach is needed.

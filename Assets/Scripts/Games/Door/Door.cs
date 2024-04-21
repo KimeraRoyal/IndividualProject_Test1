@@ -1,4 +1,5 @@
 using DG.Tweening;
+using FMODUnity;
 using UnityEngine;
 
 namespace IP1
@@ -10,6 +11,8 @@ namespace IP1
         [SerializeField] private Vector3 m_openRotation;
         [SerializeField] private float m_openTime = 1.0f;
         [SerializeField] private Ease m_openEasing = Ease.Linear;
+
+        [SerializeField] private EventReference m_openEvent;
         
         private void Awake()
         {
@@ -24,6 +27,8 @@ namespace IP1
         private void OnOpened()
         {
             transform.DOLocalRotate(m_openRotation, m_openTime).SetEase(m_openEasing);
+            
+            RuntimeManager.PlayOneShot(m_openEvent);
         }
     }
 }

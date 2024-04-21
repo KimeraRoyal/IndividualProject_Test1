@@ -497,6 +497,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5224351703174778093}
     m_Modifications:
+    - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_maxAngleSoundOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_minAngleSoundOffset
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_maxAngleSoundOffsetUnlocked
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_minAngleSoundOffsetUnlocked
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5808383792577672729, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.19
