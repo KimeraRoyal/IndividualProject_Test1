@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using FMOD.Studio;
 using FMODUnity;

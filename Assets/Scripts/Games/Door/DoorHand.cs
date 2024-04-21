@@ -1,3 +1,4 @@
+using FMODUnity;
 using IP1.Interaction;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace IP1
         private MouseFollower m_mouseFollower;
 
         private Transform m_originalParent;
+        
+        [SerializeField] private EventReference m_grabbedEvent;
 
         private bool m_doorOpened;
 
@@ -55,6 +58,8 @@ namespace IP1
             m_mouseFollower.Enabled = false;
             transform.SetParent(m_handle.GripPoint);
             m_mouseFollower.TargetPosition = new Vector3(0, 0, transform.localPosition.z);
+            
+            RuntimeManager.PlayOneShot(m_grabbedEvent);
         }
     }
 }
