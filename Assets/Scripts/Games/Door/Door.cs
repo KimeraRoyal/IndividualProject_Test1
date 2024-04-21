@@ -1,6 +1,9 @@
+using System;
 using DG.Tweening;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace IP1
 {
@@ -13,6 +16,11 @@ namespace IP1
         [SerializeField] private Ease m_openEasing = Ease.Linear;
 
         [SerializeField] private EventReference m_openEvent;
+        [SerializeField] private EventReference m_ambienceEvent;
+        [ParamRef] [SerializeField] private string m_ambienceMuffleEvent;
+
+        private EventDescription m_ambienceDescription;
+        private EventInstance m_ambienceInstance;
         
         private void Awake()
         {
@@ -21,7 +29,17 @@ namespace IP1
 
         private void Start()
         {
+            m_ambienceDescription = RuntimeManager.GetEventDescription(m_ambienceEvent);
+            m_ambienceDescription.createInstance(out m_ambienceInstance);
+            m_ambienceInstance.start();
+            
             m_handle.OnOpened += OnOpened;
+        }
+
+        private void OnDestroy()
+        {
+            m_ambienceInstance.stop(STOP_MODE.ALLOWFADEOUT);
+            m_ambienceInstance.release();
         }
 
         private void OnOpened()
@@ -29,6 +47,7 @@ namespace IP1
             transform.DOLocalRotate(m_openRotation, m_openTime).SetEase(m_openEasing);
             
             RuntimeManager.PlayOneShot(m_openEvent);
+            m_ambienceInstance.setParameterByName(m_ambienceMuffleEvent, 0.0f);
         }
     }
 }

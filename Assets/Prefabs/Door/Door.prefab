@@ -307,6 +307,14 @@ MonoBehaviour:
       Data3: -1040754781
       Data4: -479611030
     Path: event:/Door/Open
+  m_ambienceEvent:
+    Guid:
+      Data1: -2029516630
+      Data2: 1256382135
+      Data3: 928762763
+      Data4: 706743760
+    Path: event:/Door/Ambience
+  m_ambienceMuffleEvent: Door Ambience Muffling
 --- !u!1 &8736650845271843295
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,14 +382,14 @@ MonoBehaviour:
       Data2: 1217675695
       Data3: -1730604394
       Data4: -138649651
-    Path: event:/Door/Handle/Locked
+    Path: event:/Door/Handle/Down Locked
   m_handleUpEventUnlocked:
     Guid:
-      Data1: -151329610
-      Data2: 1217675695
-      Data3: -1730604394
-      Data4: -138649651
-    Path: event:/Door/Handle/Locked
+      Data1: 1020026654
+      Data2: 1119033983
+      Data3: 2014005136
+      Data4: 102531677
+    Path: event:/Door/Handle/Up Locked
   m_handleDownEventUnlocked:
     Guid:
       Data1: -1124196388

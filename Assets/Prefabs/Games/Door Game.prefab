@@ -497,6 +497,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5224351703174778093}
     m_Modifications:
+    - target: {fileID: 275100287647757642, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_ambienceEvent.Path
+      value: event:/Door/Ambience
+      objectReference: {fileID: 0}
+    - target: {fileID: 275100287647757642, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_ambienceMuffleEvent
+      value: Door Ambience Muffling
+      objectReference: {fileID: 0}
+    - target: {fileID: 275100287647757642, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_ambienceEvent.Guid.Data1
+      value: -2029516630
+      objectReference: {fileID: 0}
+    - target: {fileID: 275100287647757642, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_ambienceEvent.Guid.Data2
+      value: 1256382135
+      objectReference: {fileID: 0}
+    - target: {fileID: 275100287647757642, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_ambienceEvent.Guid.Data3
+      value: 928762763
+      objectReference: {fileID: 0}
+    - target: {fileID: 275100287647757642, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
+      propertyPath: m_ambienceEvent.Guid.Data4
+      value: 706743760
+      objectReference: {fileID: 0}
     - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_maxAngleSoundOffset
       value: 25
