@@ -175,6 +175,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7510878594840428521, guid: dc24f4bf49aec1147935285964c44311, type: 3}
+      propertyPath: m_maxAngleSoundOffset
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510878594840428521, guid: dc24f4bf49aec1147935285964c44311, type: 3}
+      propertyPath: m_maxAngleSoundOffsetUnlocked
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510878594840428521, guid: dc24f4bf49aec1147935285964c44311, type: 3}
+      propertyPath: m_minAngleSoundOffsetUnlocked
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7763111007554700581, guid: dc24f4bf49aec1147935285964c44311, type: 3}
       propertyPath: m_Name
       value: Door Game

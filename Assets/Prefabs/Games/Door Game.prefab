@@ -499,7 +499,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_maxAngleSoundOffset
-      value: 5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_minAngleSoundOffset
@@ -507,11 +507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_maxAngleSoundOffsetUnlocked
-      value: 5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5161510210609516503, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_minAngleSoundOffsetUnlocked
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5808383792577672729, guid: edebeb4340060f240b8f096101c0b0f1, type: 3}
       propertyPath: m_LocalPosition.x
